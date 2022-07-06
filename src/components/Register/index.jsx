@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useHistory } from "react-router-dom";
+import { StyledForm } from "./style";
 
 const Register = () => {
   const schema = yup.object().shape({
@@ -16,7 +17,16 @@ const Register = () => {
         "Formato de email inválido"
       )
       .required("Campo obrigatório"),
-
+    cpf: yup.number().typeError("Campo obrigatório"),
+    number: yup.number().typeError("Campo obrigatório"),
+    city: yup.string().required("Campo obrigatório"),
+    img: yup
+      .string()
+      .required("Campo obrigatório")
+      .matches(
+        /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi,
+        "Link inválido"
+      ),
     password: yup
       .string()
       .required("Campo obrigatório")
@@ -51,7 +61,7 @@ const Register = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit(registerUser)} className="registerForm">
+      <StyledForm onSubmit={handleSubmit(registerUser)}>
         <h2>Crie sua conta</h2>
         <p>Rapido e grátis, vamos nessa</p>
 
@@ -107,6 +117,16 @@ const Register = () => {
         {errors.city && <span className="error"> {errors.city.message}</span>}
 
         <label>
+          Foto
+          <input
+            type="text"
+            {...register("img")}
+            placeholder="Insira o link da foto"
+          />
+        </label>
+        {errors.img && <span className="error"> {errors.img.message}</span>}
+
+        <label>
           Senha
           <input
             type="password"
@@ -131,10 +151,11 @@ const Register = () => {
         )}
 
         <button type="submit">CADASTRAR</button>
+
         {/* <button type="button" onClick={history.goBack}>
           VOLTAR
         </button> */}
-      </form>
+      </StyledForm>
     </>
   );
 };
