@@ -4,7 +4,6 @@ import { CatalogueContext } from "../../contexts/catalogue/catalogue";
 
 const Dashboard = () => {
   const { request } = useContext(CatalogueContext);
-  console.log(request);
 
   return (
     <>
