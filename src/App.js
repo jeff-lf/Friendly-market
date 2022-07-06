@@ -1,8 +1,11 @@
-import './App.css';
+import "./App.css";
+import Routes from "./routes";
 
 function App() {
   return (
-    <h1>Oi!</h1>
+    <div>
+      <Routes />
+    </div>
   );
 }
 
