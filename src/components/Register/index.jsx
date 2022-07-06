@@ -6,7 +6,7 @@ import { StyledForm } from "./style";
 
 const Register = () => {
   const schema = yup.object().shape({
-    name: yup
+    fullname: yup
       .string()
       .required("Campo obrigatório")
       .matches(/^[A-Za-z]+$/, "Apenas letras"),
@@ -18,9 +18,9 @@ const Register = () => {
       )
       .required("Campo obrigatório"),
     cpf: yup.number().typeError("Campo obrigatório"),
-    number: yup.number().typeError("Campo obrigatório"),
+    cellphone: yup.number().typeError("Campo obrigatório"),
     city: yup.string().required("Campo obrigatório"),
-    img: yup
+    user_image: yup
       .string()
       .required("Campo obrigatório")
       .matches(
@@ -50,7 +50,7 @@ const Register = () => {
   const registerUser = (data) => {
     console.log(data);
     /* api
-      .post("/users", data)
+      .post("/signup", data)
       .then(() => {
         toast.success("Conta criada com sucesso!");
       })
@@ -69,11 +69,13 @@ const Register = () => {
           Nome
           <input
             type="text"
-            {...register("name")}
+            {...register("fullname")}
             placeholder="Digite aqui seu nome"
           />
         </label>
-        {errors.name && <span className="error"> {errors.name.message}</span>}
+        {errors.fullname && (
+          <span className="error"> {errors.fullname.message}</span>
+        )}
 
         <label>
           Email
@@ -99,12 +101,12 @@ const Register = () => {
           Telefone
           <input
             type="number"
-            {...register("number")}
+            {...register("cellphone")}
             placeholder="Digite aqui seu telefone"
           />
         </label>
-        {errors.number && (
-          <span className="error"> {errors.number.message}</span>
+        {errors.cellphone && (
+          <span className="error"> {errors.cellphone.message}</span>
         )}
         <label>
           Cidade
@@ -120,11 +122,13 @@ const Register = () => {
           Foto
           <input
             type="text"
-            {...register("img")}
+            {...register("user_image")}
             placeholder="Insira o link da foto"
           />
         </label>
-        {errors.img && <span className="error"> {errors.img.message}</span>}
+        {errors.user_image && (
+          <span className="error"> {errors.user_image.message}</span>
+        )}
 
         <label>
           Senha
