@@ -8,6 +8,7 @@ export const StyledButton = styled.button`
   border-radius: ${(props) => (props.quadrado ? "3px" : "15px")};
   color: white;
   padding: 8px;
+  cursor: pointer;
   :hover {
     border: 2px solid #4797de;
   }
