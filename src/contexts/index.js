@@ -4,8 +4,12 @@ import { CityProvider } from "./localization";
 function Providers({ children }) {
   return (
     <>
-      <CatalogueProvider>{children}</CatalogueProvider>
-      <CityProvider>{children}</CityProvider>
+      
+      <CityProvider>
+        <CatalogueProvider>
+          {children}
+        </CatalogueProvider>
+      </CityProvider>
     </>
   );
 }
