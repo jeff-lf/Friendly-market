@@ -38,8 +38,6 @@ const Login = () => {
 
       <div>
         <p>Ainda não possui cadastro?</p>
-
-        <button>Cadastre-se</button>
       </div>
     </form>
   );

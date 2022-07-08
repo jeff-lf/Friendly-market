@@ -67,7 +67,7 @@ const Register = () => {
     api
       .post("/signup", newUser)
       .then(() => {
-        toast.success("Conta cadastrada com sucesso");
+        toast.success("Conta cadastrada com sucesso!");
       })
       .catch((err) => {
         console.log(err);
