@@ -1,10 +1,12 @@
 import './App.css';
 import {Header} from './components/Header'
+import {AboutUs} from './pages/AboutUs'
+
 
 function App() {
   return (
     <>
-    <Header />
+    <AboutUs />
     <h1>Oi!</h1>
     </>
   );

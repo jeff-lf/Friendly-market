@@ -12,13 +12,18 @@ export const Header = () => {
     //localStorage.setItem()
     const token = localStorage.getItem('@token')
 
+    const handleClick = () => {
+        history.push("/dashboard")
+       //request();
+    }
+
     return (
         <PageContainer>
         <Container>
             <h1>Friendly Market</h1>
             <div className="buttons">
-                <button onClick={() => history.push('/dashboard')}>Produtos</button>
-                <button>Eventos</button>
+                <button onClick={() => handleClick()}>Produtos</button>
+                <button>Anunciar</button>
                 <button onClick={() => history.push('/aboutUs')} >Sobre</button>
             </div>
             <div>
