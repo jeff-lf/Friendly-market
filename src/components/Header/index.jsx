@@ -3,6 +3,7 @@ import { Avatar } from '@mui/material'
 import FormatAlignJustifyIcon from '@mui/icons-material/FormatAlignJustify'
 import { useState } from "react"
 import { useHistory } from "react-router-dom"
+import Button from '../Button'
 
 
 export const Header = () => {
@@ -22,13 +23,13 @@ export const Header = () => {
         <Container>
             <h1>Friendly Market</h1>
             <div className="buttons">
-                <button onClick={() => handleClick()}>Produtos</button>
-                <button>Anunciar</button>
-                <button onClick={() => history.push('/aboutUs')} >Sobre</button>
+                <Button handlerClick={() => handleClick()}title='Produtos'></Button>
+                <Button handlerClick={() => history.push('/perfil')} title='Anunciar'></Button>
+                <Button handlerClick={() => history.push('/aboutUs')} title='Sobre'></Button>
             </div>
             <div>
-                {token? (<button><Avatar alt="" src="" /><FormatAlignJustifyIcon/></button>) : 
-                    (<button onClick={() => history.push('/register')}>Entrar</button>)
+                {token? (<Button><Avatar alt="" src="" /><FormatAlignJustifyIcon/></Button>) : 
+                    (<Button handlerClick={() => history.push('/register')} title='Entrar' blue></Button>)
                 }
                 
             </div>
