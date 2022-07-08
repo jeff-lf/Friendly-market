@@ -1,15 +1,12 @@
-import './App.css';
-import {Header} from './components/Header'
-import {AboutUs} from './pages/AboutUs'
-
+import Routes from "./routes";
 
 function App() {
   return (
-    <>
-    <AboutUs />
-    <h1>Oi!</h1>
-    </>
+    <div>
+      <Routes />
+    </div>
   );
 }
 
 export default App;
+
