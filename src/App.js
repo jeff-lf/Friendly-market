@@ -1,12 +1,10 @@
-import "./App.css";
-import Register from "./components/Register";
+import Routes from "./routes";
 
 function App() {
   return (
-    <>
-      <h1>Oi!</h1>
-      <Register />
-    </>
+    <div>
+      <Routes />
+    </div>
   );
 }
 
