@@ -1,5 +1,5 @@
-import axios from "axios";
 import { createContext, useState } from "react";
+import { api } from "../../services/api";
 
 export const CatalogueContext = createContext([]);
 
@@ -7,8 +7,8 @@ export const CatalogueProvider = ({ children }) => {
   const [catalogue, setCatalogue] = useState([]);
 
   const request = () => {
-    axios
-      .get("https://api-friendly-market.herokuapp.com/products")
+    api
+      .get("/products")
       .then((res) => {
         setCatalogue(res.data);
       })
