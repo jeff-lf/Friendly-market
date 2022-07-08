@@ -1,23 +1,23 @@
 import { useForm } from "react-hook-form";
-import { useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
+import { api } from "../../services/api";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const { register, handleSubmit } = useForm();
-  const history = useHistory();
 
   const identifyLogin = (data) => {
-    console.log(data);
-    /*     api
+    api
       .post("/login", data)
       .then((res) => {
         const { accessToken, user } = res.data;
 
-        localStorage.setItem("@Hub:token", JSON.stringify(accessToken));
-        localStorage.setItem("@Hub:id", JSON.stringify(user.id));
+        localStorage.setItem("@Market:token", JSON.stringify(accessToken));
+        localStorage.setItem("@Market:id", JSON.stringify(user.id));
       })
       .catch(() => {
         toast.error("Usuário não encontrado ou senha incorreta");
-      }); */
+      });
   };
 
   return (

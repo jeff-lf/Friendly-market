@@ -1,10 +1,14 @@
-import "./App.css";
+import { ToastContainer } from "react-toastify";
+import Login from "./components/Login";
+import Register from "./components/Register";
+import Routes from "./routes";
 
 function App() {
   return (
-    <>
-      <h1>Oi!</h1>
-    </>
+    <div>
+      <Routes />
+      <ToastContainer />
+    </div>
   );
 }
 
