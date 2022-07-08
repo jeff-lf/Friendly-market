@@ -9,23 +9,22 @@ const Register = () => {
     fullname: yup
       .string()
       .required("Campo obrigatório")
-      .matches(/^[A-Za-z]+$/, "Apenas letras"),
+      .matches(/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]+$/, "Apenas letras"),
     email: yup
       .string()
-      .matches(
-        /^[a-z0-9.]+@[a-z0-9]+\.[a-z]+(\.[a-z]+)?$/i,
-        "Formato de email inválido"
-      )
+      .email("Formato de email inválido")
       .required("Campo obrigatório"),
     cpf: yup.number().typeError("Campo obrigatório"),
-    cellphone: yup.number().typeError("Campo obrigatório"),
+    cellphone: yup
+      .string()
+      .matches(/^([1-9]{2}) (9)[0-9]{4}-[0-9]{4}$/, "Formato inválido")
+      .required("Campo obrigatório"),
     city: yup.string().required("Campo obrigatório"),
     user_image: yup
       .string()
-      .required("Campo obrigatório")
       .matches(
         /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)?/gi,
-        "Link inválido"
+        { message: "Link inválido", excludeEmptyString: true }
       ),
     password: yup
       .string()
@@ -48,9 +47,22 @@ const Register = () => {
   const history = useHistory();
 
   const registerUser = (data) => {
-    console.log(data);
+    const { fullname, email, cpf, cellphone, city, user_image, password } =
+      data;
+
+    const newUser = {
+      fullname,
+      email,
+      cpf,
+      cellphone,
+      city,
+      user_image,
+      password,
+    };
+    console.log(newUser);
+
     /* api
-      .post("/signup", data)
+      .post("/signup", newUser)
       .then(() => {
         toast.success("Conta criada com sucesso!");
       })
@@ -100,7 +112,6 @@ const Register = () => {
         <label>
           Telefone
           <input
-            type="number"
             {...register("cellphone")}
             placeholder="Digite aqui seu telefone"
           />
