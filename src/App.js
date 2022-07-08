@@ -1,14 +1,8 @@
-import './App.css';
-import {Header} from './components/Header'
 import "./App.css";
+import Routes from "./routes";
 
 function App() {
-  return (
-    <>
-      <Header />
-      <h1>Oi!</h1>
-    </>
-  );
-};
+  return <Routes />;
+}
 
 export default App;
