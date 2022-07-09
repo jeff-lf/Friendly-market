@@ -1,6 +1,10 @@
 import {Container, Animation} from './style'
 
+/*aqui na props, vc pode deixar apenas home, e na hora q for chamar o componente
+a pessoa passa a home={true} */
 
+/*nao esquece de adicionar uma alt pra img, se n fica aparecendo um errinho chato, pode colocar 
+tipo "Imagem de Apresentação" */
 
 export const Presentation = ({home=true}) => {
 return(
