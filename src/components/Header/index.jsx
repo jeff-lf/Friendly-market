@@ -28,7 +28,7 @@ export const Header = () => {
                 <Button handlerClick={() => history.push('/aboutUs')} title='Sobre'></Button>
             </div>
             <div>
-                {token? (<Button><Avatar alt="" src="" /><FormatAlignJustifyIcon/></Button>) : 
+                {token? (<Button><Avatar alt="" src="" /></Button>) : 
                     (<Button handlerClick={() => history.push('/register')} title='Entrar' blue></Button>)
                 }
                 
