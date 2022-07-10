@@ -1,11 +1,16 @@
 import CityFilter from "../../components/CityFilter";
 import { Header } from "../../components/Header";
+import { Container } from "./styled";
+import * as React from "react";
 
 const Home = () => {
   return (
     <>
       <Header />
-      <CityFilter />
+      <Container>
+        <div>Apresentaçao</div>
+        <CityFilter />
+      </Container>
     </>
   );
 };
