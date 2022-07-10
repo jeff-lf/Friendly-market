@@ -36,7 +36,7 @@ const Login = () => {
 
       <button>Entrar</button>
 
-      <div>
+      <div> {/*essa div fica fora do form */}
         <p>Ainda não possui cadastro?</p>
       </div>
     </form>
