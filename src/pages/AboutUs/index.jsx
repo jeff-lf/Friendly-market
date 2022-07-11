@@ -10,9 +10,9 @@ export const AboutUs = () => {
             <Header />
             <div className='aboutusContainer'>
                 <div className='left'>
-                    <span>nossa visão</span>
+                    <span>Nossa visão</span>
                     <h2>Somos uma empresa de venda e compras de produtos online, garantimos o transporte seguro de cada mercadoria.</h2>
-                    <img src={aboutUs}></img>
+                    <img src={aboutUs} alt="Imagem para aba Sobre"></img>
                 </div>
                 <div className='right'>
                     <p>Milhares de pessoas diariamente estão adquirindo novos produtos e vendendo os que não usam mais. </p>

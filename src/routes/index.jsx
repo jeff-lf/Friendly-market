@@ -11,9 +11,11 @@ const Routes = () => {
     <Switch>
       <Route exact path="/">
         <Providers>
-          <AboutUs/>
           <Home/>
         </Providers>
+      </Route>
+      <Route path="/aboutUs">
+        <AboutUs/>
       </Route>
       <Route path="/login">
         <RegisterLogin />
