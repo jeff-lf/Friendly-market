@@ -1,9 +1,12 @@
-import './App.css';
-import { Presentation } from './components/Presentation';
+import { ToastContainer } from "react-toastify";
+import Routes from "./routes";
 
 function App() {
   return (
-    <h1>Oi!</h1>
+    <div>
+      <Routes />
+      <ToastContainer />
+    </div>
   );
 }
 
