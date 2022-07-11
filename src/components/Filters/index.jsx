@@ -18,7 +18,7 @@ export const Filters  = () => {
     const [input, setInput] = useState('')
 
     console.log(filtered)
-    
+
     return (
         <Container>
             <SearchInput>
