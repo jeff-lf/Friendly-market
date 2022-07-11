@@ -1,8 +1,10 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { useHistory } from "react-router-dom";
 import { StyledForm } from "./style";
+import { api } from "../../services/api";
+import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 
 const Register = () => {
   const schema = yup.object().shape({
@@ -14,10 +16,13 @@ const Register = () => {
       .string()
       .email("Formato de email inválido")
       .required("Campo obrigatório"),
-    cpf: yup.number().typeError("Campo obrigatório"),
+    cpf: yup.string().required("Campo obrigatório"),
     cellphone: yup
       .string()
-      .matches(/^([1-9]{2}) (9)[0-9]{4}-[0-9]{4}$/, "Formato inválido")
+      .matches(
+        /^([1-9]{2}) (9)[0-9]{4}-[0-9]{4}$/,
+        "Formato inválido. Ex: 11 90000-0000"
+      )
       .required("Campo obrigatório"),
     city: yup.string().required("Campo obrigatório"),
     user_image: yup
@@ -44,8 +49,6 @@ const Register = () => {
     formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
 
-  const history = useHistory();
-
   const registerUser = (data) => {
     const { fullname, email, cpf, cellphone, city, user_image, password } =
       data;
@@ -61,14 +64,15 @@ const Register = () => {
     };
     console.log(newUser);
 
-    /* api
+    api
       .post("/signup", newUser)
       .then(() => {
-        toast.success("Conta criada com sucesso!");
+        toast.success("Conta cadastrada com sucesso!");
       })
-      .catch(() => {
+      .catch((err) => {
+        console.log(err);
         toast.error("Ops! Algo deu errado");
-      }); */
+      });
   };
 
   return (
@@ -166,10 +170,6 @@ const Register = () => {
         )}
 
         <button type="submit">CADASTRAR</button>
-
-        {/* <button type="button" onClick={history.goBack}>
-          VOLTAR
-        </button> */}
       </StyledForm>
     </>
   );
