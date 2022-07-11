@@ -1,30 +1,45 @@
+import { Box, Tab, Tabs } from "@mui/material";
 import { useState } from "react";
 import { Header } from "../../components/Header";
+import Login from "../../components/Login";
+import { Presentation } from "../../components/Presentation";
 import Register from "../../components/Register";
+import { StyledContainer } from "./style";
 
-const LoginOrRegister = () => {
-  const [registered, setRegistered] = useState(false);
+export const LoginOrRegister = () => {
+  const [selectedTab, setSelectedTab] = useState(0);
 
+  const handleChange = (event, newValue) => {
+    setSelectedTab(newValue);
+  };
+
+  const TabPanel = (props) => {
+    const { children, value, index } = props;
+    return value === index && children;
+  };
   return (
     <>
       <Header />
-      {registered ? (
-        <>
-          <h1>olá</h1>
-          <button onClick={() => setRegistered(false)}>CADASTRAR</button>
-        </>
-      ) : (
-        <>
-          <Register />
-          <button onClick={() => setRegistered(true)}>
-            JÁ POSSUO UMA CONTA
-          </button>
-        </>
-      )}
-
-      {/* apresentação */}
+      <StyledContainer>
+        <Box className="formContainer">
+          <Box
+            sx={{ borderBottom: 1, borderColor: "divider" }}
+            className="tabs"
+          >
+            <Tabs value={selectedTab} onChange={handleChange}>
+              <Tab label="Login" />
+              <Tab label="Cadastro" />
+            </Tabs>
+          </Box>
+          <TabPanel value={selectedTab} index={0}>
+            <Login />
+          </TabPanel>
+          <TabPanel value={selectedTab} index={1}>
+            <Register />
+          </TabPanel>
+        </Box>
+        <Presentation />
+      </StyledContainer>
     </>
   );
 };
-
-export default LoginOrRegister;

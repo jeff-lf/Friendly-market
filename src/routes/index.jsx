@@ -3,7 +3,7 @@ import Providers from "../contexts";
 import Dashboard from "../pages/Dashboard";
 import Home from "../pages/Home";
 import Perfil from "../pages/Perfil";
-import LoginOrRegister from "../pages/Register-Login";
+import { LoginOrRegister } from "../pages/Register-Login";
 
 const Routes = () => {
   return (
