@@ -40,7 +40,6 @@ export const Header = () => {
             {token ? (
               <button>
                 <Avatar alt="" src="" />
-                <FormatAlignJustifyIcon />
               </button>
             ) : (
               <button onClick={() => history.push("/login")}>Entrar</button>
