@@ -13,8 +13,20 @@ export const Container = styled.nav`
     justify-content: space-around;
     border-bottom: 2px solid black;
    
-    button{
-    margin: 20px;
-   }
+    div{
+        button{
+        margin: 20px;
+        }
+    }   
     
+    .avatar{
+        background: none;
+        border: none;
+
+        :hover{
+            transform: scale(1.2);
+        }
+    }
+
+
 `

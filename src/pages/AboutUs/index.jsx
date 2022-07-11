@@ -1,5 +1,6 @@
 import { Container } from './style'
 import { Header } from '../../components/Header'
+import aboutUs from '../../assets/aboutUs.png'
 
 
 export const AboutUs = () => {
@@ -11,7 +12,7 @@ export const AboutUs = () => {
                 <div className='left'>
                     <span>nossa visão</span>
                     <h2>Somos uma empresa de venda e compras de produtos online, garantimos o transporte seguro de cada mercadoria.</h2>
-                    <img></img>
+                    <img src={aboutUs}></img>
                 </div>
                 <div className='right'>
                     <p>Milhares de pessoas diariamente estão adquirindo novos produtos e vendendo os que não usam mais. </p>
