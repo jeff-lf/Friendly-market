@@ -3,13 +3,20 @@ import { createContext, useEffect, useState } from "react";
 export const CityContext = createContext([]);
 
 export const CityProvider = ({ children }) => {
-  const [select, setSelect] = useState();
+  const [select, setSelect] = useState("");
+  const [inputMunicipio, setInput] = useState("");
 
   const [city, setCity] = useState([]);
   const [municipios, setMunicipios] = useState([]);
 
   const handleCapacity = (e) => {
+    e.preventDefault();
     setSelect(e.target.value);
+  };
+
+  const handleMunicipio = (e) => {
+    e.preventDefault();
+    setInput(e.target.value);
   };
 
   useEffect(() => {
@@ -31,7 +38,16 @@ export const CityProvider = ({ children }) => {
   }, [select]);
 
   return (
-    <CityContext.Provider value={{ select, handleCapacity, municipios, city }}>
+    <CityContext.Provider
+      value={{
+        select,
+        inputMunicipio,
+        handleMunicipio,
+        handleCapacity,
+        municipios,
+        city,
+      }}
+    >
       {children}
     </CityContext.Provider>
   );

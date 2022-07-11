@@ -1,6 +1,13 @@
 import { StyledButton } from "./styled";
 
-export default function Button({ handlerClick, blue, width, quadrado, title }) {
+export default function Button({
+  handlerClick,
+  blue,
+  width,
+  quadrado,
+  title,
+  children,
+}) {
   return (
     <>
       <StyledButton
@@ -9,6 +16,7 @@ export default function Button({ handlerClick, blue, width, quadrado, title }) {
         blue={blue}
         onClick={() => handlerClick()}
       >
+        {children}
         {title}
       </StyledButton>
     </>

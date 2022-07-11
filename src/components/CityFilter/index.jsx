@@ -1,30 +1,74 @@
+import { MenuItem, TextField } from "@mui/material";
 import { useContext } from "react";
 import { CityContext } from "../../contexts/localization";
+import { Container } from "./style";
+import SearchIcon from "@mui/icons-material/Search";
+import Button from "../Button";
+import { useHistory } from "react-router-dom";
+import { CatalogueContext } from "../../contexts/catalogue/catalogue";
 
 const CityFilter = () => {
-  const { municipios, city, handleCapacity } = useContext(CityContext);
+  const history = useHistory("");
+  const { request } = useContext(CatalogueContext);
+
+  const {
+    select,
+    inputMunicipio,
+    handleMunicipio,
+    municipios,
+    city,
+    handleCapacity,
+  } = useContext(CityContext);
+
+  const handleClick = () => {
+    request();
+    history.push("/dashboard");
+  };
 
   return (
-    <>
+    <Container>
       <h4>Onde você está agora?</h4>
 
-      <select id="estado" name="estado" onChange={handleCapacity}>
-        {city.map((item) => (
-          <option key={item.id} value={item.sigla}>
-            {item.nome}
-          </option>
+      <TextField
+        id="estado"
+        select
+        label="Estado"
+        value={select}
+        onChange={handleCapacity}
+        helperText="Por favor selecione o estado"
+      >
+        {city.map((option) => (
+          <MenuItem key={option.id} value={option.sigla}>
+            {option.nome}
+          </MenuItem>
         ))}
-      </select>
+      </TextField>
 
-      <select id="municipio" name="municipio" placeholder="Município">
-        {municipios.map((item) => (
-          <option key={item.id} value={item}>
-            {item.nome}
-          </option>
+      <TextField
+        id="cidade"
+        select
+        label="Cidade"
+        value={inputMunicipio}
+        onChange={handleMunicipio}
+        helperText="Por favor selecione a cidade"
+      >
+        {municipios.map((option) => (
+          <MenuItem key={option.id} value={option.nome}>
+            {option.nome}
+          </MenuItem>
         ))}
-      </select>
-      <button>Pesquisar</button>
-    </>
+      </TextField>
+
+      <Button
+        quadrado={false}
+        width={150}
+        blue={true}
+        title={"Pesquisar"}
+        handlerClick={handleClick}
+      >
+        <SearchIcon />
+      </Button>
+    </Container>
   );
 };
 
