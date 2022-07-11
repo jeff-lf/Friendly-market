@@ -55,16 +55,25 @@ export const Container = styled.div`
     }
 
     .card{
-        width: 35vw;
-        height: 320px;
+        width: 36vw;
+        height: 200px;
         display: flex;
         
-        div{
+        picture{
+            width: 120px;
+            height: 120px;
             img{
-                width: 150px;
-                height: 150px;
+                width: 120px;
+                height: 120px;
                 border-radius: 100%;
             }
         }
+
+        .textContainer{
+            width: 65%;
+            margin-left: 10px;
+        }
+
+
     }
 `
