@@ -16,6 +16,7 @@ export const LoginOrRegister = () => {
     const { children, value, index } = props;
     return value === index && children;
   };
+  
   return (
     <>
       <Header />
@@ -23,8 +24,7 @@ export const LoginOrRegister = () => {
         <Box className="formContainer">
           <Box
             sx={{ borderBottom: 1, borderColor: "divider" }}
-            className="tabs"
-          >
+            className="tabs">
             <Tabs value={selectedTab} onChange={handleChange}>
               <Tab label="Login" />
               <Tab label="Cadastro" />
