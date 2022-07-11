@@ -1,4 +1,5 @@
 import { Route, Switch } from "react-router-dom";
+import { Filters } from "../components/Filters";
 import Providers from "../contexts";
 import Dashboard from "../pages/Dashboard";
 import Home from "../pages/Home";
@@ -19,6 +20,7 @@ const Routes = () => {
       <Route path="/dashboard">
         <Providers>
           <Dashboard />
+          <Filters/>
         </Providers>
       </Route>
       <Route path="/perfil">

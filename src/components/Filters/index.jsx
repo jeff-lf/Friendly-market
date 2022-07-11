@@ -9,35 +9,16 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 
 import { Container, SearchInput } from "./style"
 import { useContext, useState } from "react";
-import { CatalogueContext } from '../../contexts/catalogue/catalogue';
-import ProductList from '../Products';
+import { FiltersContext } from '../../contexts/filters/filters';
 
 export const Filters  = () => {
 
-    const { catalogue } = useContext(CatalogueContext)
+    const { filterInputProducts, filterProducts, filtered } = useContext(FiltersContext)
 
     const [input, setInput] = useState('')
 
-    //deve começar com os produtos de acordo com a cidade
-    const [filtered, setFiltered] = useState([])
-
-
-    const filterInputProducts = (input) => {
-        let filterList =  catalogue.filter((product) => product.category || product.productName === input)
-        setFiltered(filterList )
-    }
-
-    const filterProducts = (category) => {
-        if(category === "Todos"){
-            setFiltered(catalogue)
-        }else{
-            let filterList =  catalogue.filter((product) => product.category === category)
-            setFiltered(filterList)
-        }
-    }
-
-
-
+    console.log(filtered)
+    
     return (
         <Container>
             <SearchInput>
@@ -58,7 +39,7 @@ export const Filters  = () => {
                 <div className='searchImg'><SmartToyOutlinedIcon fontSize="large"/></div>
                     <span>Brinquedos</span>
                 </button>
-                <button onClick={() => filterProducts('Veículos')}>
+                <button onClick={() => filterProducts('Veiculos')}>
                 <div className='searchImg'><DirectionsCarOutlinedIcon fontSize="large"/></div>
                     <span>Veículos</span>
                 </button>

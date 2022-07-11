@@ -6,6 +6,8 @@ export const CatalogueContext = createContext([]);
 export const CatalogueProvider = ({ children }) => {
   const [catalogue, setCatalogue] = useState([]);
 
+
+
   const request = () => {
     api
       .get("/products")
@@ -15,8 +17,9 @@ export const CatalogueProvider = ({ children }) => {
       .catch((err) => console.log(err));
   };
 
+ 
   return (
-    <CatalogueContext.Provider value={{ catalogue, request }}>
+    <CatalogueContext.Provider value={{ catalogue, setCatalogue, request }}>
       {children}
     </CatalogueContext.Provider>
   );
