@@ -5,7 +5,7 @@ import { CloseButton, EditForm, ModalContainer, ModalHeader } from "./style";
 import { api } from "../../services/api";
 import { toast } from "react-toastify";
 
-export const Modal = ({ user, setModal }) => {
+export const EditUserModal = ({ user, setModal }) => {
   const schema = yup.object().shape({
     fullname: yup
       .string()

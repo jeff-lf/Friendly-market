@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { api } from "../../services/api";
-import { Modal } from "../Modal";
+import { EditUserModal } from "../EditUserModal";
 import { ContainerUserInfo, InfoDiv } from "./style";
 
 const DataUser = () => {
@@ -54,7 +54,7 @@ const DataUser = () => {
       </ContainerUserInfo>
       <img src={user.user_image} alt="Imagem do usuário" />
       <button onClick={() => setModal(true)}>EDITAR</button>
-      {modal && <Modal user={user} setModal={setModal} />}
+      {modal && <EditUserModal user={user} setModal={setModal} />}
     </section>
   );
 };
