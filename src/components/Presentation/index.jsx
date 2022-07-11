@@ -6,12 +6,12 @@ return(
    
     <Container>
         <>
-        <h2>Compre diretamente dos seus vizinhos</h2>
-        <p>Negocie com pessoas da sua cidade com mais segurança e proximidade do vendedor</p>
-        
-        <Animation>
-            <img alt="Imagem de apresentação" src={presentation}></img>
-        </Animation>
+            <h2>Compre diretamente dos seus vizinhos</h2>
+            <p>Negocie com pessoas da sua cidade com mais segurança e proximidade do vendedor</p>
+            
+            <Animation>
+                <img alt="Imagem de apresentação" src={presentation}></img>
+            </Animation>
         </>
     </Container>
     

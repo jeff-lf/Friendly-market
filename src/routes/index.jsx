@@ -1,5 +1,4 @@
 import { Route, Switch } from "react-router-dom";
-import { Presentation } from "../components/Presentation";
 import Providers from "../contexts";
 import Dashboard from "../pages/Dashboard";
 import Home from "../pages/Home";
