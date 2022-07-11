@@ -6,10 +6,8 @@ import Button from '../Button'
 import { api } from "../../services/api"
 
 
-
 export const Header = () => {
-
-    const history = useHistory('')
+    const history = useHistory("");
 
     const token = localStorage.getItem("@Market:token")
     const id = localStorage.getItem("@Market:id")
@@ -26,25 +24,29 @@ export const Header = () => {
     if(id){
         dataUser()
     }
+    
     const userImg = localStorage.getItem("@Market:img")
 
     return (
-        <PageContainer>
+      <PageContainer>
         <Container>
-            <h1>Friendly Market</h1>
-            <div className="buttons">
-                <Button handlerClick={() => history.push('/dashboard')} title="Produtos" ></Button>
-                <Button title="Anuncios"></Button>
-                <Button handlerClick={() => history.push('/aboutUs')} title="Sobre" ></Button>
-            </div>
-            <div>
-                {token? (<button className="avatar"><Avatar alt="foto do usuario"  sx={{bgcolor: "#83D0C8"}} src={userImg} /></button>) : 
-                    (<Button handlerClick={() => history.push('/login')} title="Entrar" blue></Button>)
-                }
-                
-            </div>
+          <h1>Friendly Market</h1>
+          <div className="buttons">
+            <button onClick={() => history.push("/dashboard")}>Produtos</button>
+            <button>Eventos</button>
+            <button onClick={() => history.push("/aboutUs")}>Sobre</button>
+          </div>
+          <div>
+            {token ? (
+              <button>
+                <Avatar alt="" src="" />
+                <FormatAlignJustifyIcon />
+              </button>
+            ) : (
+              <button onClick={() => history.push("/login")}>Entrar</button>
+            )}
+          </div>
         </Container>
-
-        </PageContainer>
-    )
-}
+      </PageContainer>
+    );
+};
