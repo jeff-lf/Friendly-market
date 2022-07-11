@@ -1,6 +1,10 @@
 import DataUser from "../../components/DataUser";
 
 const Perfil = () => {
-  return <DataUser />;
+  return (
+    <>
+      <DataUser />
+    </>
+  );
 };
 export default Perfil;

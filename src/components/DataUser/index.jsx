@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
-import { toast } from "react-toastify";
 import { api } from "../../services/api";
+import { Modal } from "../Modal";
 import { ContainerUserInfo, InfoDiv } from "./style";
 
 const DataUser = () => {
   const [user, setUser] = useState("");
-  const id = JSON.parse(localStorage.getItem("@Market:id"));
-  const token = JSON.parse(localStorage.getItem("@Market:token"));
+  const [modal, setModal] = useState(false);
 
   useEffect(() => {
+    const id = JSON.parse(localStorage.getItem("@Market:id"));
+
     api
       .get(`/users/${id}`)
       .then((res) => {
@@ -17,20 +18,6 @@ const DataUser = () => {
       })
       .catch((err) => console.log(err));
   }, []);
-
-  const EditUserInfo = (data) => {
-    api
-      .put(`/users/${id}`, data, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
-      .then((res) => {
-        console.log(res);
-        toast.success("Informações atualizadas com sucesso!");
-      })
-      .catch((err) => toast.error("Falha na atualização"));
-  };
 
   return (
     <section className="dataUser">
@@ -67,7 +54,8 @@ const DataUser = () => {
         </InfoDiv>
       </ContainerUserInfo>
       <img src={user.user_image} alt="Imagem do usuário" />
-      <button>EDITAR</button>
+      <button onClick={() => setModal(true)}>EDITAR</button>
+      {modal && <Modal user={user} setModal={setModal} />}
     </section>
   );
 };
