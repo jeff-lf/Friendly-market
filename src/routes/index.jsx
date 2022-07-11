@@ -3,8 +3,8 @@ import Providers from "../contexts";
 import Dashboard from "../pages/Dashboard";
 import Home from "../pages/Home";
 import Perfil from "../pages/Perfil";
-import Login from "../pages/Register-Login";
 import { AboutUs } from "../pages/AboutUs";
+import RegisterLogin from "../pages/Register-Login";
 
 const Routes = () => {
   return (
@@ -16,7 +16,7 @@ const Routes = () => {
         </Providers>
       </Route>
       <Route path="/login">
-        <Login />
+        <RegisterLogin />
       </Route>
       <Route path="/dashboard">
         <Providers>
