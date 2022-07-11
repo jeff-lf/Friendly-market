@@ -1,3 +1,7 @@
-const Login = () => {};
+import Login from "../../components/Login";
 
-export default Login;
+const RegisterLogin = () => {
+    return <Login/>
+};
+
+export default RegisterLogin;
