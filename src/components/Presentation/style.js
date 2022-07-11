@@ -5,6 +5,7 @@ import { keyframes } from "styled-components";
 export const Container = styled.div`
     height: 92vh;
     width: 50vw;
+    padding-left: 20px;
 
     h2{
         max-width: 300px;
@@ -19,10 +20,7 @@ export const Container = styled.div`
 
     img{
         margin-top: 40px;
-        /* width: 50vw;
-        height: 60vh; */
-        /*comentei aqui pq a imagem fica com uma qualidade péssima
-        quando seta uma largura e altura */
+        
     }
 
 `
@@ -36,7 +34,7 @@ const animation = keyframes`
 
   to {
     position: absolute;
-    left: 0px;
+    left: 20px;
     transform: scale(1) rotate(0deg);
   }
 
