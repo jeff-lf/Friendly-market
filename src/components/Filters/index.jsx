@@ -9,25 +9,31 @@ import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 
 import { Container, SearchInput } from "./style"
 import { useContext, useState } from "react";
+import { CatalogueContext } from '../../contexts/catalogue/catalogue';
+import ProductList from '../Products';
 
 export const Filters  = () => {
 
+    const { catalogue } = useContext(CatalogueContext)
+
     const [input, setInput] = useState('')
-    console.log(input)
 
     //deve começar com os produtos de acordo com a cidade
     const [filtered, setFiltered] = useState([])
 
 
-    //const { catalogue } = useContext(CatalogueContext)
+    const filterInputProducts = (input) => {
+        let filterList =  catalogue.filter((product) => product.category || product.productName === input)
+        setFiltered(filterList )
+    }
 
     const filterProducts = (category) => {
-        /*if(category === "Todos"){
+        if(category === "Todos"){
             setFiltered(catalogue)
         }else{
             let filterList =  catalogue.filter((product) => product.category === category)
             setFiltered(filterList)
-        }*/
+        }
     }
 
 
@@ -37,7 +43,7 @@ export const Filters  = () => {
             <SearchInput>
                 <div><SearchOutlinedIcon /></div>
                 <input onChange={(e) => setInput(e.target.value)}/>
-                <button>Pesquisar</button>
+                <button onClick={() => filterInputProducts(input)}>Pesquisar</button>
             </SearchInput>
             <div>
                 <button onClick={() => filterProducts('Todos')}>
