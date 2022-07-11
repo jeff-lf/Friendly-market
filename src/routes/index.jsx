@@ -22,7 +22,9 @@ const Routes = () => {
         </Providers>
       </Route>
       <Route path="/perfil">
-        <Perfil />
+        <Providers>
+          <Perfil />
+        </Providers>
       </Route>
     </Switch>
   );
