@@ -2,13 +2,14 @@ import CityFilter from "../../components/CityFilter";
 import { Header } from "../../components/Header";
 import { Container } from "./styled";
 import * as React from "react";
+import { Presentation } from "../../components/Presentation";
 
 const Home = () => {
   return (
     <>
       <Header />
       <Container>
-        <div>Apresentaçao</div>
+        <Presentation />
         <CityFilter />
       </Container>
     </>

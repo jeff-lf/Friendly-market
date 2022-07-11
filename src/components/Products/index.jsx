@@ -16,7 +16,6 @@ const ProductList = () => {
       {inputMunicipio === ""
         ? catalogue.map((item, index) => <Card key={index} item={item} />)
         : filter.map((item, index) => <Card key={index} item={item} />)}
-      ;
     </>
   );
 };

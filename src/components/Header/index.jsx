@@ -1,40 +1,58 @@
 import { Container, PageContainer } from "./styles";
 import { Avatar } from "@mui/material";
-import FormatAlignJustifyIcon from "@mui/icons-material/FormatAlignJustify";
+import { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { CatalogueContext } from "../../contexts/catalogue/catalogue";
-import { useContext } from "react";
+import Button from "../Button";
+import { api } from "../../services/api";
 
 export const Header = () => {
   const history = useHistory("");
 
-  const { request } = useContext(CatalogueContext);
+  const token = localStorage.getItem("@Market:token");
+  const id = localStorage.getItem("@Market:id");
 
-  //localStorage.setItem()
-  const token = localStorage.getItem("@token");
-
-  const handleClick = () => {
-    history.push("/dashboard");
-    request();
+  const dataUser = () => {
+    api.get(`users/${id}`).then((res) => {
+      const { user_image } = res;
+      localStorage.setItem("@Market:img", JSON.stringify(user_image));
+    });
   };
+
+  if (id) {
+    dataUser();
+  }
+  const userImg = localStorage.getItem("@Market:img");
 
   return (
     <PageContainer>
       <Container>
         <h1>Friendly Market</h1>
         <div className="buttons">
-          <button onClick={handleClick}>Produtos</button>
-          <button>Eventos</button>
-          <button onClick={() => history.push("/aboutUs")}>Sobre</button>
+          <Button
+            handlerClick={() => history.push("/dashboard")}
+            title="Produtos"
+          ></Button>
+          <Button title="Anuncios"></Button>
+          <Button
+            handlerClick={() => history.push("/aboutUs")}
+            title="Sobre"
+          ></Button>
         </div>
         <div>
           {token ? (
-            <button>
-              <Avatar alt="" src="" />
-              <FormatAlignJustifyIcon />
+            <button className="avatar">
+              <Avatar
+                alt="foto do usuario"
+                sx={{ bgcolor: "#83D0C8" }}
+                src={userImg}
+              />
             </button>
           ) : (
-            <button onClick={() => history.push("/register")}>Entrar</button>
+            <Button
+              handlerClick={() => history.push("/login")}
+              title="Entrar"
+              blue
+            ></Button>
           )}
         </div>
       </Container>

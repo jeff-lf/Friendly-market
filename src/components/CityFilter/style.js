@@ -7,9 +7,10 @@ export const Container = styled.div`
   justify-content: center;
   gap: 20px;
   background-color: #83d0c8;
-  width: 50vw;
-  height: 100vh;
   color: #fff;
+  height: 92vh;
+  width: 50vw;
+
   h4 {
     color: #fff;
   }
