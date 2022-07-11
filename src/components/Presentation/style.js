@@ -19,8 +19,10 @@ export const Container = styled.div`
 
     img{
         margin-top: 40px;
-        width: 50vw;
-        height: 60vh;
+        /* width: 50vw;
+        height: 60vh; */
+        /*comentei aqui pq a imagem fica com uma qualidade péssima
+        quando seta uma largura e altura */
     }
 
 `
