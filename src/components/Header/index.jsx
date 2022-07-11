@@ -26,7 +26,7 @@ export const Header = () => {
               <FormatAlignJustifyIcon />
             </button>
           ) : (
-            <button onClick={() => history.push("/register")}>Entrar</button>
+            <button onClick={() => history.push("/login")}>Entrar</button>
           )}
         </div>
       </Container>
