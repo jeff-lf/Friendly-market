@@ -2,7 +2,6 @@ import { Box, Tab, Tabs } from "@mui/material";
 import { useState } from "react";
 import { Header } from "../../components/Header";
 import Login from "../../components/Login";
-import { Presentation } from "../../components/Presentation";
 import Register from "../../components/Register";
 import { StyledContainer } from "./style";
 
@@ -38,7 +37,6 @@ export const LoginOrRegister = () => {
             <Register />
           </TabPanel>
         </Box>
-        <Presentation />
       </StyledContainer>
     </>
   );
