@@ -22,7 +22,7 @@ export const ContainerCard = styled.div`
     .containerBtns{
         display: flex;
         width: 100%;
-        justify-content: space-evenly
+        justify-content: space-evenly;
     }
 `
 

@@ -1,5 +1,5 @@
-import { FaEdit } from "react-icons/fa";
-import { MdDelete } from "react-icons/md";
+import EditIcon from '@mui/icons-material/Edit';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import {ContainerCard} from './style.js'
 import {ModalDelete} from '../Modals/delete/index'
 import { useState } from "react";
@@ -32,8 +32,8 @@ export const CardMyProduct = ({ product }) => {
         </span>
       </div>
       <div className='containerBtns'>
-        <FaEdit onClick={() => editProduct()} />
-        <MdDelete onClick={() => deleteProduct()} />
+        <EditIcon onClick={() => editProduct()} />
+        <DeleteForeverIcon onClick={() => deleteProduct()} />
       </div>
       <ModalDelete show={show} setShow={setShow} product={product}/>
       <ModalEdit show={showEdit} setShow={setShowEdit} product={product}/>
