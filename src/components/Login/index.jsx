@@ -5,10 +5,11 @@ import "react-toastify/dist/ReactToastify.css";
 import { LoginForm } from "./style";
 import { TextField } from "@mui/material";
 import { StyledButton } from "../Button/styled";
-import PersonIcon from "@mui/icons-material/Person";
+import { useHistory } from "react-router-dom";
 
 const Login = () => {
   const { register, handleSubmit } = useForm();
+  const history = useHistory();
 
   const identifyLogin = (data) => {
     api
@@ -32,7 +33,6 @@ const Login = () => {
         <label>
           Email
           <TextField
-            id="standard-basic"
             variant="standard"
             type="email"
             placeholder="Email cadastrado"
@@ -43,7 +43,6 @@ const Login = () => {
         <label>
           Senha
           <TextField
-            id="standard-basic"
             variant="standard"
             type="password"
             placeholder="Insira sua senha"
@@ -51,7 +50,12 @@ const Login = () => {
           />
         </label>
 
-        <StyledButton type="submit" width="250" quadrado="quadrado">
+        <StyledButton
+          type="submit"
+          width="250"
+          quadrado="quadrado"
+          onClick={() => history.push("/perfil")}
+        >
           ENTRAR
         </StyledButton>
       </LoginForm>

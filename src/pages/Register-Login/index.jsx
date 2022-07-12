@@ -1,10 +1,10 @@
-import { Box, Tab, Tabs } from "@mui/material";
-import { red } from "@mui/material/colors";
 import { useState } from "react";
+import { Box, Tab, Tabs } from "@mui/material";
 import { Header } from "../../components/Header";
 import Login from "../../components/Login";
 import Register from "../../components/Register";
 import { StyledContainer } from "./style";
+import { Redirect } from "react-router-dom";
 
 export const LoginOrRegister = () => {
   const [selectedTab, setSelectedTab] = useState(0);
@@ -17,6 +17,11 @@ export const LoginOrRegister = () => {
     const { children, value, index } = props;
     return value === index && children;
   };
+
+  const token = localStorage.getItem("@Market:token");
+  if (token) {
+    return <Redirect to="/perfil" />;
+  }
 
   return (
     <>
