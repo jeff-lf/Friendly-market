@@ -1,10 +1,21 @@
 import { FaEdit } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
-import "./style.css";
+import {ContainerCard} from './style.js'
+import {ModalDelete} from '../Modals/delete/index'
+import { useState } from "react";
 
-export const CardMyProduct = ({ product, deleteProduct, editProduct }) => {
+export const CardMyProduct = ({ product }) => {
+  const [show, setShow] = useState(false)
+  function deleteProduct(){
+    setShow(true)
+    console.log(show)
+  }
+
+  function editProduct(){
+    setShow(true)
+  }
   return (
-    <div className="containerCard">
+    <ContainerCard>
       <img className="cardImg" src={product.image} alt={product.description} />
       <div className="containerInfo">
         <span>{product.category}</span>
@@ -21,6 +32,7 @@ export const CardMyProduct = ({ product, deleteProduct, editProduct }) => {
         <FaEdit onClick={() => editProduct()} />
         <MdDelete onClick={() => deleteProduct()} />
       </div>
-    </div>
+      <ModalDelete show={show} setShow={setShow} product={product}/>
+    </ContainerCard>
   );
 };

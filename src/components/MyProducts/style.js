@@ -12,7 +12,7 @@ export const ContainerMyProducts = styled.div`
   span {
     color: grey;
   }
-  div {
+  .listContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
