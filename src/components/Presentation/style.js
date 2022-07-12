@@ -27,6 +27,26 @@ export const Container = styled.div`
         margin-left: 5rem;
     }
 
+    @media screen and (min-width: 319px) and (max-width: 1041px){
+      .titleName{
+        margin: 2rem 0 2rem 1rem;
+        width: 18rem;
+        font-size: 22px;
+      }
+
+      .subtitleName{
+        margin: 0 0 0 1rem;
+        max-width: 9rem;
+
+      }
+
+      img{
+        margin: -15rem 0 0 10rem;
+        width: 9rem;
+      }
+    }
+
+
 `
 
 const animation = keyframes`
