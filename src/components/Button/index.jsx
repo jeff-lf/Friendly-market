@@ -14,7 +14,7 @@ export default function Button({
         quadrado={quadrado}
         width={width}
         blue={blue}
-        onClick={() => handlerClick()}
+        onClick={handlerClick}
       >
         {children}
         {title}

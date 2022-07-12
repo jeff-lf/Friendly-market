@@ -27,7 +27,7 @@ const CityFilter = () => {
 
   return (
     <Container>
-      <h4>Onde você está agora?</h4>
+      <h2>Onde você está agora?</h2>
 
       <TextField
         id="estado"

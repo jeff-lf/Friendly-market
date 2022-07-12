@@ -7,19 +7,24 @@ export const Container = styled.div`
     width: 50vw;
     padding-left: 20px;
 
-    h2{
+    .titleName{
         max-width: 300px;
-        margin-left: 50px;
-        margin-top: 50px;
+        margin: 3rem 0 1rem 7.5rem;
+        line-height: 1.2;
+        font-size: 28px;
     }
 
-    p{
-        max-width: 250px;
-        margin-left: 50px;
+    .subtitleName{
+        max-width: 16rem;
+        margin-left: 7.5rem;
+        font-size: 14px;
+        line-height: 1.6;
     }
 
     img{
         margin-top: 40px;
+        width: 35rem;
+        margin-left: 5rem;
     }
 
 `

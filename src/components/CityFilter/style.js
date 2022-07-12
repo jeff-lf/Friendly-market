@@ -7,10 +7,16 @@ export const Container = styled.div`
   justify-content: center;
   gap: 20px;
   background-color: #83d0c8;
-  width: 50vw;
-  height: 100vh;
   color: #fff;
+  height: 100%;
+  width: 50vw;
+
   h4 {
     color: #fff;
+  }
+
+  .css-i4bv87-MuiSvgIcon-root{
+    padding-top: 5px;
+    margin-right: 10px;
   }
 `;

@@ -7,14 +7,29 @@ export const PageContainer = styled.div`
 `
 export const Container = styled.nav`
     width: 100vw;
-    height: 8vh;
+    height: 5rem;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     border-bottom: 2px solid black;
    
-    button{
-    margin: 20px;
-   }
+    div{
+        button{
+        margin: 20px;
+        }
+    }   
     
+    .avatar{
+        background: none;
+        border: none;
+
+        :hover{
+            transform: scale(1.2);
+        }
+    }
+
+    .titleHome{
+        cursor: pointer;
+    }
+
 `
