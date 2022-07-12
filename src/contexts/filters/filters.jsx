@@ -5,14 +5,15 @@ export const FiltersContext = createContext([]);
 
 export const FiltersProvider = ({ children }) => {
     const { catalogue } = useContext(CatalogueContext)
-    console.log(`@catalogo: ${catalogue}`)
 
     const [filtered, setFiltered] = useState([])
 
 
     const filterInputProducts = (input) => {
-       let filterList =  catalogue.filter((product) => product.category || product.productName === input)
-       setFiltered(filterList)
+       let filterList =  catalogue.filter((product) => product.category.toLowerCase().includes(input))
+       let filterListNome =  catalogue.filter((product) => product.productName.toLowerCase().includes(input))
+
+       setFiltered([...filterList, ...filterListNome])
    }
 
    const filterProducts = (category) => {

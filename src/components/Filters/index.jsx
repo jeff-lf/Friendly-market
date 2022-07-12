@@ -19,13 +19,13 @@ export const Filters  = () => {
 
 
     const [input, setInput] = useState('')
-
+    console.log(input)
     console.log(filtered)
     return (
         <Container>
             <SearchInput>
                 <div><SearchOutlinedIcon /></div>
-                <input placeholder="Ex: Vestuário" onChange={(e) => setInput(e.target.value)}/>
+                <input placeholder="Ex: Vestuário" onChange={(e) => setInput(e.target.value.toLowerCase())}/>
                 <Button handlerClick={() => filterInputProducts(input)} quadrado title="pesquisar"></Button>
             </SearchInput>
             <div>
