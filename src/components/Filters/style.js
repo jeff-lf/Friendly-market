@@ -7,15 +7,14 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top: 50px;
 
 
     div{
         display: flex;
         flex-direction: row;
-        margin-top: 20px;
-        
 
-        button{
+        .SearchButton{
         background: none;
         display: flex;
         flex-direction: column;
@@ -42,28 +41,41 @@ export const Container = styled.div`
 `
 
 export const SearchInput = styled.div`
-        width: 30vw;
-        height: 4vh;
+        width: 45vw;
+        height: 5vh;
         border: 2px solid black;
         border-radius: 5px;
+        display: flex;
+        align-items: center;
 
         input{
             border: none;
-            width: 75%;
+            width: 90%;
             margin-left: 5px;
+            height: 4vh;
         }
         textarea:focus, input:focus {
             box-shadow: 0 0 0 0;
             outline: 0;
         }
-    
+
+        button{
+            height: 30px;
+            margin-right: 10px;
+        }
+
         div{
             display: flex;
             justify-content: center;
             align-items: center;
+            border-right: 1px solid black;
+            width: 40px;
+            margin: 0px;
+            height: 5vh;
+
         }
         svg{
-            margin-bottom: 16px;
+            
             color: grey;
         }
 `

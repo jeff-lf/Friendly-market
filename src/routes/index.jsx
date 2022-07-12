@@ -12,6 +12,7 @@ const Routes = () => {
     <Switch>
       <Route exact path="/">
         <Providers>
+          <Filters/>
           <Home/>
         </Providers>
       </Route>
