@@ -8,10 +8,15 @@ export const Container = styled.div`
   gap: 20px;
   background-color: #83d0c8;
   color: #fff;
-  height: 92vh;
+  height: 100%;
   width: 50vw;
 
   h4 {
     color: #fff;
+  }
+
+  .css-i4bv87-MuiSvgIcon-root{
+    padding-top: 5px;
+    margin-right: 10px;
   }
 `;

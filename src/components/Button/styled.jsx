@@ -7,10 +7,11 @@ export const StyledButton = styled.button`
   border: none;
   border-radius: ${(props) => (props.quadrado ? "3px" : "15px")};
   color: white;
-  padding: 8px;
+  padding: 7px 15px;
   cursor: pointer;
+
   :hover {
-    border: 2px solid #4797de;
+    background-color: grey;
   }
   :active {
     background-color: ${(props) => (props.blue ? "#102335" : "#5c8d88")};

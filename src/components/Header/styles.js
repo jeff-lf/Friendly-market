@@ -7,7 +7,7 @@ export const PageContainer = styled.div`
 `
 export const Container = styled.nav`
     width: 100vw;
-    height: 8vh;
+    height: 5rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -28,5 +28,8 @@ export const Container = styled.nav`
         }
     }
 
+    .titleHome{
+        cursor: pointer;
+    }
 
 `

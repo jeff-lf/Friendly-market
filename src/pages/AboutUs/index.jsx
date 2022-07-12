@@ -14,12 +14,12 @@ export const AboutUs = () => {
       <Header />
       <section className="aboutusContainer">
         <div className="left">
-          <span>Nossa visão</span>
-          <h2>
-            Somos uma empresa de venda e compras de produtos online, garantimos
+          <span>nossa visão</span>
+          <h1>
+            Somos uma empresa de venda e <br/>compras de produtos online, garantimos
             o transporte seguro de cada mercadoria.
-          </h2>
-          <img src={aboutUs} alt="Imagem para aba Sobre"></img>
+          </h1>
+          <img src={aboutUs} alt="Imagem para aba Sobre" className="imgAbout"></img>
         </div>
         <div className="right">
           <p>

@@ -25,16 +25,16 @@ export const Header = () => {
   return (
     <PageContainer>
       <Container>
-        <h1 onClick={() => history.push("/")}>Friendly Market</h1>
+        <h1 className="titleHome" onClick={() => history.push("/")}>Friendly Market</h1>
         <div className="buttons">
           <Button
             handlerClick={() => history.push("/dashboard")}
-            title="Produtos"
+            title="produtos"
           ></Button>
-          <Button title="Anuncios"></Button>
+          <Button title="anunciar"></Button>
           <Button
             handlerClick={() => history.push("/aboutUs")}
-            title="Sobre"
+            title="sobre"
           ></Button>
         </div>
         <div>
