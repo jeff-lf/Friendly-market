@@ -3,16 +3,19 @@ import { MdDelete } from "react-icons/md";
 import {ContainerCard} from './style.js'
 import {ModalDelete} from '../Modals/delete/index'
 import { useState } from "react";
+import { ModalEdit } from "../Modals/editProduto/index.jsx";
 
 export const CardMyProduct = ({ product }) => {
   const [show, setShow] = useState(false)
+  const [showEdit, setShowEdit] = useState(false)
+
   function deleteProduct(){
     setShow(true)
     console.log(show)
   }
 
   function editProduct(){
-    setShow(true)
+    setShowEdit(true)
   }
   return (
     <ContainerCard>
@@ -33,6 +36,7 @@ export const CardMyProduct = ({ product }) => {
         <MdDelete onClick={() => deleteProduct()} />
       </div>
       <ModalDelete show={show} setShow={setShow} product={product}/>
+      <ModalEdit show={showEdit} setShow={setShowEdit} product={product}/>
     </ContainerCard>
   );
 };
