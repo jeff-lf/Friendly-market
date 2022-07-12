@@ -1,6 +1,5 @@
 import { Container, PageContainer } from "./styles";
 import { Avatar } from "@mui/material";
-import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import Button from "../Button";
 import { api } from "../../services/api";
@@ -26,7 +25,7 @@ export const Header = () => {
   return (
     <PageContainer>
       <Container>
-        <h1>Friendly Market</h1>
+        <h1 onClick={() => history.push("/")}>Friendly Market</h1>
         <div className="buttons">
           <Button
             handlerClick={() => history.push("/dashboard")}
