@@ -1,4 +1,9 @@
+import { useContext } from "react";
+import { ChatContext } from "../../contexts/chat";
+
 const Card = ({ index, item }) => {
+  const { setShowElement } = useContext(ChatContext);
+
   return (
     <div key={index} className="item">
       <img src={item.image} alt={item.description} />
@@ -11,7 +16,7 @@ const Card = ({ index, item }) => {
           currency: "BRL",
         })}
       </h2>
-      <button onClick={() => console.log("Quero esse!")}>Quero esse!</button>
+      <button onClick={() => setShowElement(true)}>Quero esse!</button>
     </div>
   );
 };
