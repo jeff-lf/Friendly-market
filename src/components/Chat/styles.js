@@ -28,4 +28,8 @@ export const Container = styled.div`
     background-color: #ddd;
     outline: none;
   }
+
+  button {
+    margin: 5px 50px;
+  }
 `;
