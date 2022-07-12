@@ -5,15 +5,25 @@ export const StyledContainer = styled.main`
   justify-content: center;
 
   .formContainer {
-    width: 50vw;
-    height: 92vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    width: 50vw;
+    height: 92vh;
+    margin-top: 10vh;
   }
 
   .tabs {
-    width: 200px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    .css-1aquho2-MuiTabs-indicator {
+      border: 2px solid var(--light-blue);
+    }
+    .Mui-selected {
+      color: var(--light-blue);
+      font-weight: 700;
+      border: 2px solid var(--light-blue);
+    }
   }
 `;

@@ -2,7 +2,10 @@ import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { api } from "../../services/api";
 import "react-toastify/dist/ReactToastify.css";
-import { LoginForm, StyledInput } from "./style";
+import { LoginForm } from "./style";
+import { TextField } from "@mui/material";
+import { StyledButton } from "../Button/styled";
+import PersonIcon from "@mui/icons-material/Person";
 
 const Login = () => {
   const { register, handleSubmit } = useForm();
@@ -28,15 +31,29 @@ const Login = () => {
         <p>Preencha os dados do login para acessar</p>
         <label>
           Email
-          <StyledInput type="email" {...register("email")} />
+          <TextField
+            id="standard-basic"
+            variant="standard"
+            type="email"
+            placeholder="Email cadastrado"
+            {...register("email")}
+          />
         </label>
 
         <label>
           Senha
-          <StyledInput type="password" {...register("password")} />
+          <TextField
+            id="standard-basic"
+            variant="standard"
+            type="password"
+            placeholder="Insira sua senha"
+            {...register("password")}
+          />
         </label>
 
-        <button>Entrar</button>
+        <StyledButton type="submit" width="250" quadrado="quadrado">
+          ENTRAR
+        </StyledButton>
       </LoginForm>
     </>
   );

@@ -1,10 +1,11 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { StyledForm } from "./style";
+import { RegisterForm, StyledInput } from "./style";
 import { api } from "../../services/api";
 import "react-toastify/dist/ReactToastify.css";
 import { toast } from "react-toastify";
+import { StyledButton } from "../Button/styled";
 
 const Register = () => {
   const schema = yup.object().shape({
@@ -76,13 +77,12 @@ const Register = () => {
 
   return (
     <>
-      <StyledForm onSubmit={handleSubmit(registerUser)}>
-        <h2>Crie sua conta</h2>
-        <p>Rapido e grátis, vamos nessa</p>
+      <RegisterForm onSubmit={handleSubmit(registerUser)}>
+        <h3>Cadastre-se</h3>
 
         <label>
           Nome
-          <input
+          <StyledInput
             type="text"
             {...register("fullname")}
             placeholder="Digite aqui seu nome"
@@ -94,7 +94,7 @@ const Register = () => {
 
         <label>
           Email
-          <input
+          <StyledInput
             type="text"
             {...register("email")}
             placeholder="Digite aqui seu email"
@@ -104,7 +104,7 @@ const Register = () => {
 
         <label>
           CPF
-          <input
+          <StyledInput
             type="number"
             {...register("cpf")}
             placeholder="Digite aqui seu cpf"
@@ -114,7 +114,7 @@ const Register = () => {
 
         <label>
           Telefone
-          <input
+          <StyledInput
             {...register("cellphone")}
             placeholder="Digite aqui seu telefone"
           />
@@ -124,7 +124,7 @@ const Register = () => {
         )}
         <label>
           Cidade
-          <input
+          <StyledInput
             type="text"
             {...register("city")}
             placeholder="Digite aqui a cidade"
@@ -134,7 +134,7 @@ const Register = () => {
 
         <label>
           Foto
-          <input
+          <StyledInput
             type="text"
             {...register("user_image")}
             placeholder="Insira o link da foto"
@@ -146,7 +146,7 @@ const Register = () => {
 
         <label>
           Senha
-          <input
+          <StyledInput
             type="password"
             {...register("password")}
             placeholder="Digite aqui sua senha"
@@ -158,7 +158,7 @@ const Register = () => {
 
         <label>
           Confirmar senha
-          <input
+          <StyledInput
             type="password"
             {...register("confirmPassword")}
             placeholder="Digite novamente sua senha"
@@ -168,8 +168,10 @@ const Register = () => {
           <span className="error"> {errors.confirmPassword.message}</span>
         )}
 
-        <button type="submit">CADASTRAR</button>
-      </StyledForm>
+        <StyledButton type="submit" width="210" quadrado="quadrado">
+          CADASTRAR
+        </StyledButton>
+      </RegisterForm>
     </>
   );
 };

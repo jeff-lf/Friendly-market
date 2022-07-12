@@ -1,4 +1,5 @@
 import { Box, Tab, Tabs } from "@mui/material";
+import { red } from "@mui/material/colors";
 import { useState } from "react";
 import { Header } from "../../components/Header";
 import Login from "../../components/Login";
@@ -16,18 +17,30 @@ export const LoginOrRegister = () => {
     const { children, value, index } = props;
     return value === index && children;
   };
-  
+
   return (
     <>
       <Header />
       <StyledContainer>
         <Box className="formContainer">
-          <Box
-            sx={{ borderBottom: 1, borderColor: "divider" }}
-            className="tabs">
+          <Box className="tabs">
             <Tabs value={selectedTab} onChange={handleChange}>
-              <Tab label="Login" />
-              <Tab label="Cadastro" />
+              <Tab
+                sx={{
+                  border: 1,
+                  borderBottom: 3,
+                  width: 150,
+                }}
+                label="Login"
+              />
+              <Tab
+                sx={{
+                  border: 1,
+                  borderBottom: 3,
+                  width: 150,
+                }}
+                label="Cadastro"
+              />
             </Tabs>
           </Box>
           <TabPanel value={selectedTab} index={0}>
