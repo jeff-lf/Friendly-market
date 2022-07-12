@@ -21,7 +21,7 @@ export const Header = () => {
             const { user_image } = res
             localStorage.setItem("@Market:img", JSON.stringify(user_image))
         })
-    }
+    };
     
     if(id){
         dataUser()
