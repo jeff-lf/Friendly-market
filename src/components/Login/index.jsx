@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { api } from "../../services/api";
 import "react-toastify/dist/ReactToastify.css";
-import { LoginForm } from "./style";
+import { LoginForm, StyledInput } from "./style";
 
 const Login = () => {
   const { register, handleSubmit } = useForm();
@@ -24,16 +24,16 @@ const Login = () => {
   return (
     <>
       <LoginForm onSubmit={handleSubmit(identifyLogin)}>
-        <h3>Seja bem-vindo!</h3>
+        <h3>Seja bem-vinde!</h3>
         <p>Preencha os dados do login para acessar</p>
         <label>
           Email
-          <input type="email" {...register("email")} />
+          <StyledInput type="email" {...register("email")} />
         </label>
 
         <label>
           Senha
-          <input type="password" {...register("password")} />
+          <StyledInput type="password" {...register("password")} />
         </label>
 
         <button>Entrar</button>
