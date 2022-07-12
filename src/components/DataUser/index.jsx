@@ -11,7 +11,7 @@ const DataUser = () => {
     const id = JSON.parse(localStorage.getItem("@Market:id"));
 
     api
-      .get(`/users/2`)
+      .get(`/users/${id}`)
       .then((res) => {
         setUser(res.data);
       })
