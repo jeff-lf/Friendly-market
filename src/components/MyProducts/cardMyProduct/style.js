@@ -4,7 +4,7 @@ export const ContainerCard = styled.div`
     width: 100%;
     min-width: 200px;
     max-width: 345px;
-    padding: 5px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
 

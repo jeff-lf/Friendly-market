@@ -10,7 +10,7 @@ const Perfil = () => {
 
   const [tabValue, setTabValue] = useState(0);
 
-  const handleChange = (newValue) => {
+  const handleChange = (event, newValue) => {
     setTabValue(newValue);
   };
 
@@ -22,11 +22,9 @@ const Perfil = () => {
   return (
     <>
       <Header />
-      <MyProducts/>
-      {/* <Tabs value={tabValue} onChange={handleChange} variant="fullWidth">
-        <Tab value="0" label="Meus dados" />
-        <Tab value="1" label="Meus produtos" />
-        <Tab value="2" label="Histórico" />
+      <Tabs value={tabValue} onChange={handleChange} centered>
+        <Tab label="Meus dados" />
+        <Tab label="Meus produtos" />
       </Tabs>
 
       <TabPanel value={tabValue} index={0}>
@@ -37,15 +35,9 @@ const Perfil = () => {
 
       <TabPanel value={tabValue} index={1}>
         <Container>
-          <DataUser />
+          <MyProducts/>
         </Container>
       </TabPanel>
-
-      <TabPanel value={tabValue} index={2}>
-        <Container>
-          <DataUser />
-        </Container>
-      </TabPanel> */}
     </>
   );
 };
