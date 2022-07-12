@@ -22,11 +22,8 @@ export const Container = styled.nav`
     .avatar{
         background: none;
         border: none;
-
         :hover{
             transform: scale(1.2);
         }
     }
-
-
 `
