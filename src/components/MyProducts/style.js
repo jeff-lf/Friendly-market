@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ContainerMyProducts = styled.div`
-  width: 80%;
+  width: 90%;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -9,10 +9,6 @@ export const ContainerMyProducts = styled.div`
   -webkit-box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.42);
   box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.42);
   padding: 15px;
-  .bemVindo {
-    font-weight: 700;
-    color: #555555;
-  }
   span {
     color: grey;
   }
@@ -42,5 +38,15 @@ export const ContainerMyProducts = styled.div`
         gap: 10px;
       }
     }
+  }
+`;
+
+export const StyledH2 = styled.h2`
+  font-weight: 600;
+  font-size: 18px;
+  color: #555555;
+  @media (min-width: 550px) {
+    font-size: 35px;
+    font-weight: 400;
   }
 `;
