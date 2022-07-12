@@ -11,16 +11,16 @@ import { Container, SearchInput } from "./style"
 import Button from '../Button'
 import { useContext, useState } from "react";
 import { FiltersContext } from '../../contexts/filters/filters';
-import { CatalogueContext } from '../../contexts/catalogue/catalogue';
+// import { CatalogueContext } from '../../contexts/catalogue/catalogue';
 
 export const Filters  = () => {
 
     const { filterInputProducts, filterProducts, filtered} = useContext(FiltersContext)
 
+    console.log(filtered)
 
     const [input, setInput] = useState('')
-    console.log(input)
-    console.log(filtered)
+
     return (
         <Container>
             <SearchInput>
@@ -46,7 +46,7 @@ export const Filters  = () => {
                     <span>Veículos</span>
                 </button>
                 <button className="SearchButton" onClick={() => filterProducts('Eletronicos')}>
-                <div className='searchImg'><SmartphoneOutlinedIcon fontSinze="large"/></div>
+                <div className='searchImg'><SmartphoneOutlinedIcon fontSize="large"/></div>
                     <span>Eletrônicos e celulares</span>
                 </button>
                 <button className="SearchButton" onClick={() => filterProducts('Hobbies')}>

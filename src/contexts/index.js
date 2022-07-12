@@ -9,7 +9,7 @@ function Providers({ children }) {
         <CityProvider>
           <CatalogueProvider>
             <FiltersProvider>
-            {children}
+              {children}
             </FiltersProvider>
           </CatalogueProvider>
         </CityProvider>
