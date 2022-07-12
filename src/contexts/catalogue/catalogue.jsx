@@ -11,12 +11,12 @@ export const CatalogueProvider = ({ children }) => {
     api
       .get("/products")
       .then((res) => {
-        console.log(res.data)
         setCatalogue(res.data);
       })
       .catch((err) => console.log(err));
   }, []);
 
+ 
   return (
     <CatalogueContext.Provider value={{ catalogue }}>
       {children}
