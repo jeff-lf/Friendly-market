@@ -1,23 +1,25 @@
+import { useContext } from "react";
+import { ChatContext } from "../../contexts/chat";
+import Button from "../Button";
 import { Container } from "./styles";
-import Button from '../Button'
 
-const Card = ({ id, item }) => {
+const Card = ({ index, item }) => {
+  const { setShowElement } = useContext(ChatContext);
+
   return (
     <Container>
-      <div key={id} className="item">
-        <div className="divImg">
-          <img src={item.image} alt={item.description} />
-        </div>
+      <div key={index} className="item">
+        <img src={item.image} alt={item.description} />
         <span>{item.category}</span>
-        <h3 className="title">{item.productName}</h3>
-        <p className="description">{item.description}</p>
+        <h3>{item.productName}</h3>
+        <p>{item.description}</p>
         <h2>
-          R${item.price.toLocaleString("pt-BR", {
+          {item.price.toLocaleString("pt-BR", {
             style: "currency",
             currency: "BRL",
           })}
         </h2>
-        <Button width={120} handlerClick={() => console.log("Quero esse!")} title="Quero esse!"></Button>
+        <Button width={120} handlerClick={() => setShowElement(true)} title="Quero esse!"></Button>
       </div>
     </Container>
   );

@@ -1,3 +1,4 @@
+import Chat from "../../components/Chat";
 import { Filters } from "../../components/Filters";
 import { Header } from "../../components/Header";
 import ProductList from "../../components/Products";
@@ -10,6 +11,7 @@ const Dashboard = () => {
       <Header />
       <Filters/>
       <ProductList />
+      <Chat />
     </Container>
   );
 };
