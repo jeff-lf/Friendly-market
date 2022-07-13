@@ -10,6 +10,7 @@ export const ContainerCard = styled.div`
 
     .cardImg{
         width: 100%;
+        max-height:315px;
     }
     
     .containerInfo{
