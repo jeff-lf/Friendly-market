@@ -7,8 +7,8 @@ export const PageContainer = styled.div`
     `;
 
 export const Container = styled.nav`
-/* background-color: white;
-    position: fixed; */
+background-color: white;
+    position: fixed;
     width: 100vw;
     height: 5rem;
     display: flex;

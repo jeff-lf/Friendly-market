@@ -16,7 +16,7 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 3rem;
+    margin-top: 7rem;
 
     span {
       color: grey;
@@ -37,7 +37,7 @@ export const Container = styled.div`
 
   .right {
     width: 30vw;
-    margin-top: 3rem;
+    margin-top: 7rem;
 
     p {
       margin-top: 3rem;
