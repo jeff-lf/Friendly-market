@@ -17,7 +17,7 @@ const Card = ({ id, item }) => {
             currency: "BRL",
           })}
         </h2>
-        <Button handlerClick={() => console.log("Quero esse!")} title="Quero esse!"></Button>
+        <Button width={120} handlerClick={() => console.log("Quero esse!")} title="Quero esse!"></Button>
       </div>
     </Container>
   );

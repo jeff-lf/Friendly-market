@@ -55,7 +55,6 @@ export const Container = styled.div`
             font-weight: 500;
             font-family: "Poppins";
             height: 30px;
-            width: 50%;
         };
     };
 
