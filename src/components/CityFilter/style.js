@@ -21,12 +21,12 @@ export const Container = styled.div`
     color: #fff;
   }
 
-  .css-i4bv87-MuiSvgIcon-root{
+  .css-i4bv87-MuiSvgIcon-root {
     padding-top: 5px;
     margin-right: 10px;
   }
 
-  @media screen and (min-width: 319px) and (max-width: 1041px){
+  @media screen and (min-width: 319px) and (max-width: 1041px) {
     width: 100vw;
   }
 `;

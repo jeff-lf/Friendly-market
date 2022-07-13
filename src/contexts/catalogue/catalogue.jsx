@@ -16,7 +16,6 @@ export const CatalogueProvider = ({ children }) => {
       .catch((err) => console.log(err));
   }, []);
 
- 
   return (
     <CatalogueContext.Provider value={{ catalogue, setCatalogue }}>
       {children}

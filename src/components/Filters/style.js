@@ -1,13 +1,14 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const Container = styled.div`
     width: 100vw;
-    height: 18vh;
+    height: 25vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 40px;
+    margin-bottom: 30px;
 
 
     div{
@@ -15,34 +16,64 @@ export const Container = styled.div`
         flex-direction: row;
 
         .SearchButton{
-        background: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 100px;
-        border: none;
-        margin: 10px;
-        }
+            background: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 100px;
+            border: none;
+            margin: 10px;
+            
+        };
+
+        > button{
+            padding: 0px 15px;
+        };
 
         .searchImg{
-        width: 90px;
-        height: 82px;
-        border-radius: 100%;
-        background-color: lightgray;
-        border: none;   
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 20px;
-        }
+            width: 90px;
+            height: 82px;
+            border-radius: 100%;
+            background-color: lightgray;
+            border: none;   
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+
+            :hover {
+                background-color: grey;
+      }
+        };
         
-    }
+        
+    };
+
+    .buttons{
+       width: 65vw;
+       min-height: 170px;
+       max-height: 170px;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       overflow: auto;
+       overflow-y: hidden;
+       margin-top: 20px;
+       display: -webkit-box;
+       
+
+       > button{
+        width: 100%;
+        height: 150px;
+
+       };
+    };
    
-`
+`;
 
 export const SearchInput = styled.div`
         width: 45vw;
-        height: 5vh;
+        height: 20vh;
         border: 2px solid black;
         border-radius: 5px;
         display: flex;
@@ -52,17 +83,18 @@ export const SearchInput = styled.div`
             border: none;
             width: 90%;
             margin-left: 5px;
-            height: 4vh;
-        }
+            height: 3rem;
+            font-size: 16px;
+        };
+
         textarea:focus, input:focus {
             box-shadow: 0 0 0 0;
             outline: 0;
-        }
+        };
 
-        button{
-            height: 30px;
+        > button{
             margin-right: 10px;
-        }
+        };
 
         div{
             display: flex;
@@ -73,9 +105,20 @@ export const SearchInput = styled.div`
             margin: 0px;
             height: 5vh;
 
-        }
+        };
+
         svg{
-            
             color: grey;
-        }
-`
+        };
+
+        @media (max-width: 1020px) {
+            width: 80vw;
+            display:-webkit-box;
+
+            input {
+                font-size: 14px;
+            };
+
+        };
+
+`;
