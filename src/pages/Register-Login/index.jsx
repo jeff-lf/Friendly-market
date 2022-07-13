@@ -5,6 +5,7 @@ import Login from "../../components/Login";
 import Register from "../../components/Register";
 import { StyledContainer } from "./style";
 import { Redirect } from "react-router-dom";
+import background from "../../assets/background.jpg";
 
 export const LoginOrRegister = () => {
   const [selectedTab, setSelectedTab] = useState(0);
@@ -26,7 +27,7 @@ export const LoginOrRegister = () => {
   return (
     <>
       <Header />
-      <StyledContainer>
+      <StyledContainer style={{ backgroundImage: `url(${background})` }}>
         <Box className="formContainer">
           <Box className="tabs">
             <Tabs value={selectedTab} onChange={handleChange}>

@@ -10,6 +10,7 @@ export const LoginForm = styled.form`
   width: 300px;
   border-radius: 4px;
   box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.2);
+  background-color: white;
 
   input::placeholder {
     font-size: 14px;

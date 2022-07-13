@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const StyledContainer = styled.main`
   display: flex;
   justify-content: center;
+  background-image: (aboutUs);
+  background-repeat: no-repeat;
+  background-size: 100vw;
 
   .formContainer {
     display: flex;
