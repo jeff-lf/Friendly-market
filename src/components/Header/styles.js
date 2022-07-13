@@ -4,9 +4,11 @@ export const PageContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-`;
+    `;
 
 export const Container = styled.nav`
+/* background-color: white;
+    position: fixed; */
     width: 100vw;
     height: 5rem;
     display: flex;

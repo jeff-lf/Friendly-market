@@ -3,9 +3,9 @@ import { keyframes } from "styled-components";
 
 
 export const Container = styled.div`
-    height: 92vh;
+    height: 100%;
     width: 50vw;
-    padding-left: 20px;
+    /* padding-left: 20px; */
 
     .titleName{
         max-width: 300px;
@@ -22,9 +22,9 @@ export const Container = styled.div`
     }
 
     img{
-        margin-top: 1rem;
-        width: 32.5rem;
-        margin-left: 8rem;
+        /* margin-top: 1rem; */
+        width: 30rem;
+        margin-left: 2rem;
     }
 
     @media screen and (min-width: 319px) and (max-width: 1041px){
