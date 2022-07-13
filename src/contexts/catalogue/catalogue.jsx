@@ -18,7 +18,7 @@ export const CatalogueProvider = ({ children }) => {
 
  
   return (
-    <CatalogueContext.Provider value={{ catalogue, setCatalogue, request }}>
+    <CatalogueContext.Provider value={{ catalogue, setCatalogue }}>
       {children}
     </CatalogueContext.Provider>
   );
