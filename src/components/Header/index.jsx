@@ -4,6 +4,8 @@ import { Link, useHistory } from "react-router-dom";
 import Button from "../Button";
 import { api } from "../../services/api";
 import MenuIcon from "@mui/icons-material/Menu";
+import StorefrontOutlinedIcon from "@mui/icons-material/StorefrontOutlined";
+import LocalLibraryOutlinedIcon from "@mui/icons-material/LocalLibraryOutlined";
 
 export const Header = () => {
   const history = useHistory("");
@@ -30,10 +32,17 @@ export const Header = () => {
         Friendly Market
       </h1>
       <div className="dropdown">
-        <MenuIcon sx={{ fontSize: large }} />
+        <MenuIcon sx={{ fontSize: 40 }} />
         <div className="dropdown-content">
-          <Link to="/dashboard">Produtos</Link>
-          <Link to="/aboutUs">Sobre</Link>
+          <Link to="/dashboard">
+            <StorefrontOutlinedIcon />
+            Produtos
+          </Link>
+
+          <Link to="/aboutUs">
+            <LocalLibraryOutlinedIcon />
+            Sobre
+          </Link>
         </div>
       </div>
       <div className="buttons">

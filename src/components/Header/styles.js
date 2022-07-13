@@ -43,8 +43,15 @@ export const Container = styled.header`
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    padding: 12px 16px;
     z-index: 1;
+    a {
+      border: 1px solid black;
+      padding: 10px;
+      color: black;
+      background-color: #b5b5b5;
+      display: flex;
+      gap: 10px;
+    }
   }
 
   .dropdown:hover .dropdown-content {
@@ -58,6 +65,10 @@ export const Container = styled.header`
     }
     .buttons-nav {
       display: none;
+    }
+
+    .titleHome {
+      font-size: 20px;
     }
   } ;
 `;
