@@ -34,17 +34,17 @@ export const LoginOrRegister = () => {
                 sx={{
                   border: 1,
                   borderBottom: 3,
-                  width: 150,
                 }}
                 label="Login"
+                className="tab"
               />
               <Tab
                 sx={{
                   border: 1,
                   borderBottom: 3,
-                  width: 150,
                 }}
                 label="Cadastro"
+                className="tab"
               />
             </Tabs>
           </Box>

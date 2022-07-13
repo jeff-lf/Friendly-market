@@ -30,7 +30,7 @@ export const LoginForm = styled.form`
   label {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 70%;
     gap: 5px;
     font-size: 12px;
     margin-bottom: 15px;
@@ -39,5 +39,19 @@ export const LoginForm = styled.form`
   button {
     margin-top: 10px;
     font-size: 14px;
+  }
+
+  @media (min-width: 500px) {
+    height: 450px;
+    width: 450px;
+
+    ::-webkit-scrollbar {
+      width: 0.5rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #8f8f8f;
+      border-radius: 1.25rem;
+    }
   }
 `;

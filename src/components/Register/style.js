@@ -5,7 +5,7 @@ export const RegisterForm = styled.form`
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  width: 320px;
+  width: 300px;
   padding: 20px 0px;
   border-radius: 4px;
   box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.2);
@@ -27,6 +27,8 @@ export const RegisterForm = styled.form`
   .error {
     color: var(--red-error);
     font-size: 12px;
+    width: 300px;
+    text-align: center;
   }
 
   button {
@@ -49,8 +51,13 @@ export const RegisterForm = styled.form`
   }
 
   @media (min-width: 500px) {
-    height: 400px;
+    height: 450px;
     overflow: auto;
+    width: 450px;
+
+    button {
+      width: 320px;
+    }
 
     ::-webkit-scrollbar {
       width: 0.5rem;

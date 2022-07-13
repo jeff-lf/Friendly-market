@@ -14,9 +14,13 @@ export const StyledContainer = styled.main`
   }
 
   .tabs {
-    width: 300px;
     display: flex;
     justify-content: center;
+
+    .tab {
+      width: 150px;
+    }
+
     .css-1aquho2-MuiTabs-indicator {
       border: 2px solid var(--light-blue);
     }
@@ -24,6 +28,12 @@ export const StyledContainer = styled.main`
       color: var(--light-blue);
       font-weight: 700;
       border: 2px solid var(--light-blue);
+    }
+
+    @media (min-width: 500px) {
+      .tab {
+        width: 225px;
+      }
     }
   }
 `;
