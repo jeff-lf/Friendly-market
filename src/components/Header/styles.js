@@ -35,6 +35,10 @@ export const Container = styled.header`
   .dropdown {
     position: relative;
     display: none;
+
+    #dropdown-input {
+        display: none;
+    }
   }
 
   .dropdown-content {
@@ -54,7 +58,7 @@ export const Container = styled.header`
     }
   }
 
-  .dropdown:hover .dropdown-content {
+  .dropdown #dropdown-input:checked ~ .dropdown-content {
     display: flex;
     flex-direction: column;
   }

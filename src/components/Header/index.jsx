@@ -32,7 +32,9 @@ export const Header = () => {
         Friendly Market
       </h1>
       <div className="dropdown">
-        <MenuIcon sx={{ fontSize: 40 }} />
+        <input type="checkbox" id="dropdown-input"/>
+        <label for="dropdown-input"><MenuIcon sx={{ fontSize: 40 }} /></label>
+        
         <div className="dropdown-content">
           <Link to="/dashboard">
             <StorefrontOutlinedIcon />
