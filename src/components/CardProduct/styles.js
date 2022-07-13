@@ -5,13 +5,16 @@ export const Container = styled.div`
     width: 21%;
     min-width: 240px;
     min-height: 350px;
-    border: 2.5px solid black;
+    border: 2.5px solid var(--light-blue);
     max-height: 222px;
     max-width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+
+    :hover {
+        border: 2.5px solid var(--dark-blue);
+      }
 
     div{
         margin: 0 10px 0 10px;

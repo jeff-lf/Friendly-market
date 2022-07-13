@@ -23,6 +23,7 @@ export const Container = styled.div`
             max-width: 100px;
             border: none;
             margin: 10px;
+            
         };
 
         > button{
@@ -39,6 +40,10 @@ export const Container = styled.div`
             align-items: center;
             justify-content: center;
             margin: 20px;
+
+            :hover {
+                background-color: grey;
+      }
         };
         
         
@@ -55,6 +60,7 @@ export const Container = styled.div`
        overflow-y: hidden;
        margin-top: 20px;
        display: -webkit-box;
+       
 
        > button{
         width: 100%;
