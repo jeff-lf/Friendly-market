@@ -1,23 +1,21 @@
 import styled from "styled-components";
 
-export const PageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-export const Container = styled.nav`
-  width: 100vw;
-  height: 5rem;
+export const Container = styled.header`
+  width: 100%;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-around;
   border-bottom: 2px solid black;
 
-  div {
-    button {
-      margin: 20px;
-    };
+  .buttons {
+    display: flex;
+    gap: 20px;
+  };
+
+  .buttons-nav {
+    display: flex;
+    gap: 20px;
   };
 
   .avatar {
@@ -34,22 +32,50 @@ export const Container = styled.nav`
     cursor: pointer;
   };
 
-  @media screen and (min-width: 319px) and (max-width: 650px) {
-    .titleHome {
-      font-size: 18px;
-      margin-left: 2.5rem;
-    };
+  .dropdown {
+    position: relative;
+    display: none;
 
-    .buttons {
+    #dropdown-input {
+        display: none;
+    };
+  };
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    
+    a {
+      border: 1px solid black;
+      padding: 10px;
+      color: black;
+      background-color: #b5b5b5;
       display: flex;
-      margin: 4rem 2rem 4rem 2rem;
-      overflow: scroll;
+      gap: 10px;
+    };
+  };
+
+  .dropdown #dropdown-input:checked ~ .dropdown-content {
+    display: flex;
+    flex-direction: column;
+  };
+
+  @media (max-width: 650px) {
+    .dropdown {
+      display: inline-block;
+    };
+    
+    .buttons-nav {
+      display: none;
     };
 
-    div {
-      button {
-        margin: 0 8px 8px 0;
-      };
+    .titleHome {
+      font-size: 20px;
     };
   };
 `;
+
