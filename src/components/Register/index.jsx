@@ -5,7 +5,7 @@ import { RegisterForm, StyledInput } from "./style";
 import { api } from "../../services/api";
 import "react-toastify/dist/ReactToastify.css";
 import { toast } from "react-toastify";
-import { StyledButton } from "../Button/styled";
+import Button from "../Button";
 
 const Register = () => {
   const schema = yup.object().shape({
@@ -37,11 +37,11 @@ const Register = () => {
       .required("Campo obrigatório")
       .matches(
         /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&.*])(?=.{8,})/,
-        "Senha deve conter no mínimo 8 caracteres com pelo menos 1 letra maíuscula, 1 número e 1 caractere especial"
+        "Deve conter no mínimo 8 caracteres com pelo menos 1 letra maíuscula, 1 número e 1 caractere especial"
       ),
     confirmPassword: yup
       .string()
-      .oneOf([yup.ref("password")], "Senhas não são iguais"),
+      .oneOf([yup.ref("password")], "Senhas não correspondem"),
   });
 
   const {
@@ -107,7 +107,7 @@ const Register = () => {
           <StyledInput
             type="number"
             {...register("cpf")}
-            placeholder="Digite aqui seu cpf"
+            placeholder="Digite aqui seu CPF"
           />
         </label>
         {errors.cpf && <span className="error"> {errors.cpf.message}</span>}
@@ -168,9 +168,9 @@ const Register = () => {
           <span className="error"> {errors.confirmPassword.message}</span>
         )}
 
-        <StyledButton type="submit" width="210" quadrado="quadrado">
-          CADASTRAR
-        </StyledButton>
+        <Button title="CADASTRAR" type="submit" width="210" quadrado="quadrado">
+          
+        </Button>
       </RegisterForm>
     </>
   );

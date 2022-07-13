@@ -11,6 +11,7 @@ export const StyledButton = styled.button`
   cursor: pointer;
   :hover {
     border: 2px solid #4797de;
+    background-color: ${(props) => (props.blue ? "#102335" : "#5c8d88")};
   }
   :active {
     background-color: ${(props) => (props.blue ? "#102335" : "#5c8d88")};

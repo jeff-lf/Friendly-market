@@ -5,7 +5,7 @@ export const RegisterForm = styled.form`
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  width: 300px;
+  width: 320px;
   padding: 20px 0px;
   border-radius: 4px;
   box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.2);
@@ -20,7 +20,7 @@ export const RegisterForm = styled.form`
     display: flex;
     flex-direction: column;
     width: 70%;
-    font-size: 12px;
+    font-size: 14px;
     gap: 5px;
   }
 
@@ -47,10 +47,29 @@ export const RegisterForm = styled.form`
   input[type="number"] {
     -moz-appearance: textfield;
   }
+
+  @media (min-width: 500px) {
+    height: 400px;
+    overflow: auto;
+
+    ::-webkit-scrollbar {
+      width: 0.5rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #8f8f8f;
+      border-radius: 1.25rem;
+    }
+  }
 `;
 
 export const StyledInput = styled.input`
-  border: 1px solid #b5b5b5;
+  border: 2px solid #b5b5b5;
   border-radius: 4px;
   padding: 8px;
+
+  :focus {
+    transition: 0.2s;
+    border-color: var(--dark-blue);
+  }
 `;
