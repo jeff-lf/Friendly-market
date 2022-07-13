@@ -10,6 +10,11 @@ export const Container = styled.div`
   color: #fff;
   height: 100%;
   width: 50vw;
+  padding: 20px;
+
+  h2 {
+    font-size: 24px;
+  }
 
   h4 {
     color: #fff;

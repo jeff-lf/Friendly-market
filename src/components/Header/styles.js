@@ -30,11 +30,12 @@ export const Container = styled.nav`
     };
 
     .titleHome {
+        font-size: 28px;
         cursor: pointer;
     };
 
     
-    @media screen and (min-width: 319px) and (max-width: 1041px) {
+    @media screen and (min-width: 319px) and (max-width: 650px) {
 
     .titleHome {
         font-size: 18px;
