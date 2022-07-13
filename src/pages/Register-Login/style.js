@@ -6,7 +6,7 @@ export const StyledContainer = styled.main`
   background-image: (aboutUs);
   background-repeat: no-repeat;
   background-size: 100vw;
-  background-color: white;
+  margin-bottom: 50px;
 
   .formContainer {
     display: flex;
@@ -20,6 +20,7 @@ export const StyledContainer = styled.main`
   .tabs {
     display: flex;
     justify-content: center;
+    background-color: white;
 
     .tab {
       width: 150px;
@@ -39,5 +40,9 @@ export const StyledContainer = styled.main`
         width: 225px;
       }
     }
+  }
+
+  @media (min-width: 1000px) {
+    margin-bottom: 0;
   }
 `;

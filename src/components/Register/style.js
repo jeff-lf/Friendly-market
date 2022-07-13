@@ -10,6 +10,7 @@ export const RegisterForm = styled.form`
   border-radius: 4px;
   box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.2);
   background-color: white;
+
   h3 {
     font-size: 24px;
     font-weight: 500;
