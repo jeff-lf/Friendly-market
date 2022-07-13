@@ -16,7 +16,7 @@ export const AboutUs = () => {
         <div className="left">
           <span>nossa visão</span>
           <h1>
-            Somos uma empresa de venda e <br/>compras de produtos online, garantimos
+            Somos uma empresa de venda e compras de produtos online, garantimos
             o transporte seguro de cada mercadoria.
           </h1>
           <img src={aboutUs} alt="Imagem para aba Sobre" className="imgAbout"></img>
@@ -47,7 +47,7 @@ export const AboutUs = () => {
         </div>
       </section>
       <section className="apresentation">
-        <span>quem somos</span>
+        <span className="quemSomos">quem somos</span>
         <div className="cardContainer">
           <div className="card">
             <picture>

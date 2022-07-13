@@ -19,4 +19,8 @@ export const Container = styled.div`
     padding-top: 5px;
     margin-right: 10px;
   }
+
+  @media screen and (min-width: 319px) and (max-width: 1041px){
+    width: 100vw;
+  }
 `;

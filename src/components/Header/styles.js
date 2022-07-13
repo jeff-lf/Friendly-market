@@ -32,4 +32,28 @@ export const Container = styled.nav`
         cursor: pointer;
     }
 
+    
+    @media screen and (min-width: 319px) and (max-width: 1041px){
+
+    /* flex-direction: column; */
+
+    .titleHome{
+        font-size: 18px;
+        margin-left: 2.5rem;
+    }
+
+    .buttons{
+        display: flex;
+        /* flex-direction: column; */
+        margin: 4rem 2rem 4rem 2rem;
+        overflow: scroll;
+    }
+
+    div{
+        button{
+        margin: 0 8px 8px 0;
+        }
+    }   
+}
+
 `

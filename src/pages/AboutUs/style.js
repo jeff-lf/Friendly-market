@@ -96,4 +96,47 @@ export const Container = styled.div`
       }
     }
 
+    @media screen and (min-width: 319px) and (max-width: 1041px){
+      .aboutusContainer{
+        flex-direction: column;
+        width: 87vw;
+      }
+
+      .left{
+        width: auto;
+        text-align: center;
+        margin-top: 2rem;
+      }
+
+      .imgAbout{
+        width: 22rem !important;   
+      }
+
+      .right{
+        width: auto;
+        margin: 0;
+        font-weight: 200;
+      }
+
+      .cardContainer{
+        flex-direction: column;
+        margin: 0;
+        width: auto;
+      }
+      
+      .apresentation span{
+        margin-top: 30rem;
+      }
+
+      .apresentation{
+        width: 85vw;
+        border: none;
+      }
+
+      .card{
+        width: auto;
+        height: auto;
+        margin: 1rem 0;
+      }
+    }
 `
