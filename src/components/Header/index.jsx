@@ -33,7 +33,7 @@ export const Header = () => {
       </h1>
       <div className="dropdown">
         <input type="checkbox" id="dropdown-input"/>
-        <label for="dropdown-input"><MenuIcon sx={{ fontSize: 40 }} /></label>
+        <label htmlFor="dropdown-input"><MenuIcon sx={{ fontSize: 40 }} /></label>
         
         <div className="dropdown-content">
           <Link to="/dashboard">

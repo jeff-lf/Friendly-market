@@ -6,11 +6,8 @@ export const Container = styled.div`
   max-width: 100vw;
   height: 100vh;
   align-items: flex-start;
-  gap: 30px;
-  overflow-x: hidden;
-
+  
   @media screen and (min-width: 319px) and (max-width: 1041px){
     flex-direction: column;
   };
-
 `;
