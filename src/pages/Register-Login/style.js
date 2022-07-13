@@ -6,6 +6,7 @@ export const StyledContainer = styled.main`
   background-image: (aboutUs);
   background-repeat: no-repeat;
   background-size: 100vw;
+  background-color: white;
 
   .formContainer {
     display: flex;
