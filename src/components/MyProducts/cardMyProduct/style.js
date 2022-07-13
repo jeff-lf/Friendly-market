@@ -1,29 +1,29 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const ContainerCard = styled.div`
+  width: 100%;
+  min-width: 200px;
+  max-width: 345px;
+  max-height: 325px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+
+  .cardImg {
     width: 100%;
-    min-width: 200px;
-    max-width: 345px;
-    padding: 15px;
+    max-height: 315px;
+  }
+
+  .containerInfo {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+  }
 
-    .cardImg{
-        width: 100%;
-        max-height:315px;
-    }
-    
-    .containerInfo{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        align-items: flex-start;
-    }
-    
-    .containerBtns{
-        display: flex;
-        width: 100%;
-        justify-content: space-evenly;
-    }
-`
-
+  .containerBtns {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+`;

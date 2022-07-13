@@ -6,7 +6,7 @@ import { useState } from "react";
 import MyProducts from "../../components/MyProducts/index"
 
 const Perfil = () => {
-  localStorage.setItem("@Market:token", "blablabla");
+  // localStorage.setItem("@Market:token", "blablabla");
 
   const [tabValue, setTabValue] = useState(0);
 

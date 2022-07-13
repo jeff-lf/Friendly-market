@@ -33,7 +33,7 @@ export const ContainerMyProducts = styled.div`
       gap: 10px;
     };
 
-    @media (min-width: 550px) {
+    @media (min-width: 760px) {
       .bemVindo {
         font-size: 80px;
         color: red;
