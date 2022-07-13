@@ -34,7 +34,7 @@ export const Filters = () => {
           title="pesquisar"
         ></Button>
       </SearchInput>
-      <div>
+      <div className="buttons">
         <button
           className="SearchButton"
           onClick={() => filterProducts("Todos")}

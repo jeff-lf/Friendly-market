@@ -1,10 +1,13 @@
 import { Container } from "./styles";
+import Button from '../Button'
 
 const Card = ({ id, item }) => {
   return (
     <Container>
       <div key={id} className="item">
-        <img src={item.image} alt={item.description} />
+        <div className="divImg">
+          <img src={item.image} alt={item.description} />
+        </div>
         <span>{item.category}</span>
         <h3 className="title">{item.productName}</h3>
         <p className="description">{item.description}</p>
@@ -14,7 +17,7 @@ const Card = ({ id, item }) => {
             currency: "BRL",
           })}
         </h2>
-        <button onClick={() => console.log("Quero esse!")}>Quero esse!</button>
+        <Button handlerClick={() => console.log("Quero esse!")} title="Quero esse!"></Button>
       </div>
     </Container>
   );

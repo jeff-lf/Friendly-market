@@ -7,7 +7,8 @@ export const Container = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: 70px;
+    margin-bottom: 40px;
 
 
     div{
@@ -23,6 +24,9 @@ export const Container = styled.div`
         border: none;
         margin: 10px;
         }
+        button{
+            padding: 0px 15px;
+        }
 
         .searchImg{
         width: 90px;
@@ -36,6 +40,24 @@ export const Container = styled.div`
         margin: 20px;
         }
         
+        
+    }
+    .buttons{
+       width: 80vw;
+       min-height: 150px;
+       max-height: 150px;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       overflow: auto;
+       margin-top: 20px;
+       display: -webkit-box;
+
+       button{
+        width: 100%;
+        height: 150px;
+
+       }
     }
    
 `
@@ -78,4 +100,11 @@ export const SearchInput = styled.div`
             
             color: grey;
         }
+
+        @media (max-width: 1020px) {
+            width: 80vw;
+
+            display:-webkit-box;
+        }
+
 `
