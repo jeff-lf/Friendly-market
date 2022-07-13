@@ -12,6 +12,7 @@ export const Container = styled.div`
         flex-wrap: wrap;
         justify-content: center;
         box-sizing: border-box;
+        margin-bottom: 50px;
     }
 
 

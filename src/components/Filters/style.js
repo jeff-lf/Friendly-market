@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const Container = styled.div`
     width: 100vw;
@@ -16,34 +16,36 @@ export const Container = styled.div`
         flex-direction: row;
 
         .SearchButton{
-        background: none;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 100px;
-        border: none;
-        margin: 10px;
-        }
-        button{
+            background: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 100px;
+            border: none;
+            margin: 10px;
+        };
+
+        > button{
             padding: 0px 15px;
-        }
+        };
 
         .searchImg{
-        width: 90px;
-        height: 82px;
-        border-radius: 100%;
-        background-color: lightgray;
-        border: none;   
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 20px;
-        }
+            width: 90px;
+            height: 82px;
+            border-radius: 100%;
+            background-color: lightgray;
+            border: none;   
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+        };
         
         
-    }
+    };
+
     .buttons{
-       width: 80vw;
+       width: 65vw;
        min-height: 170px;
        max-height: 170px;
        display: flex;
@@ -54,14 +56,14 @@ export const Container = styled.div`
        margin-top: 20px;
        display: -webkit-box;
 
-       button{
+       > button{
         width: 100%;
         height: 150px;
 
-       }
-    }
+       };
+    };
    
-`
+`;
 
 export const SearchInput = styled.div`
         width: 45vw;
@@ -76,18 +78,17 @@ export const SearchInput = styled.div`
             width: 90%;
             margin-left: 5px;
             height: 3rem;
-            font-size: 14px;
-        }
+            font-size: 16px;
+        };
+
         textarea:focus, input:focus {
             box-shadow: 0 0 0 0;
             outline: 0;
-        }
+        };
 
-        button{
-            height: 4vh;
-            width: 40%;
+        > button{
             margin-right: 10px;
-        }
+        };
 
         div{
             display: flex;
@@ -98,17 +99,20 @@ export const SearchInput = styled.div`
             margin: 0px;
             height: 5vh;
 
-        }
+        };
+
         svg{
-            
             color: grey;
-        }
+        };
 
         @media (max-width: 1020px) {
             width: 80vw;
-
             display:-webkit-box;
 
-        }
+            input {
+                font-size: 14px;
+            };
 
-`
+        };
+
+`;

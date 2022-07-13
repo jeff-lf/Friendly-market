@@ -11,7 +11,6 @@ import { Container, SearchInput } from "./style";
 import Button from "../Button";
 import { useContext, useState } from "react";
 import { FiltersContext } from "../../contexts/filters/filters";
-// import { CatalogueContext } from '../../contexts/catalogue/catalogue';
 
 export const Filters = () => {
   const { filterInputProducts, filterProducts } = useContext(FiltersContext);
@@ -30,9 +29,10 @@ export const Filters = () => {
         />
         <Button
           height={32}
+          width={200}
           handlerClick={() => filterInputProducts(input)}
           quadrado
-          title="pesquisar"
+          title="Pesquisar"
         ></Button>
       </SearchInput>
       <div className="buttons">
