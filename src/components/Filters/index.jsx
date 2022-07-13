@@ -29,6 +29,7 @@ export const Filters = () => {
           onChange={(e) => setInput(e.target.value.toLowerCase())}
         />
         <Button
+          height={32}
           handlerClick={() => filterInputProducts(input)}
           quadrado
           title="pesquisar"

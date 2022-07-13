@@ -75,7 +75,8 @@ export const SearchInput = styled.div`
             border: none;
             width: 90%;
             margin-left: 5px;
-            height: 6vh;
+            height: 3rem;
+            font-size: 14px;
         }
         textarea:focus, input:focus {
             box-shadow: 0 0 0 0;
