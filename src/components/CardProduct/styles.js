@@ -39,6 +39,10 @@ export const Container = styled.div`
         p {
             font-size: 14px;
             height: 22px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
         };
 
         h2 {
