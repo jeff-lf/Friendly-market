@@ -22,7 +22,7 @@ export const Header = () => {
 
   if (id) {
     dataUser();
-  }
+  };
 
   const userImg = localStorage.getItem("@Market:img");
 
@@ -58,6 +58,7 @@ export const Header = () => {
             title="Sobre"
           ></Button>
         </div>
+
         {token ? (
           <button className="avatar">
             <Avatar
