@@ -14,7 +14,7 @@ export const AboutUs = () => {
       <Header />
       <section className="aboutusContainer">
         <div className="left">
-          <span>nossa visão</span>
+          <span>Nossa visão</span>
           <h1>
             Somos uma empresa de venda e compras de produtos online, garantimos
             o transporte seguro de cada mercadoria.
@@ -47,7 +47,7 @@ export const AboutUs = () => {
         </div>
       </section>
       <section className="apresentation">
-        <span className="quemSomos">quem somos</span>
+        <span className="quemSomos">Quem somos</span>
         <div className="cardContainer">
           <div className="card">
             <picture>

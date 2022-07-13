@@ -1,10 +1,11 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const PageContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-`
+`;
+
 export const Container = styled.nav`
     width: 100vw;
     height: 5rem;
@@ -13,47 +14,44 @@ export const Container = styled.nav`
     justify-content: space-around;
     border-bottom: 2px solid black;
    
-    div{
-        button{
-        margin: 20px;
-        }
-    }   
+    div {
+        button {
+            margin: 20px;
+        };
+    };   
     
-    .avatar{
+    .avatar {
         background: none;
         border: none;
 
-        :hover{
+        :hover {
             transform: scale(1.2);
-        }
-    }
+        };
+    };
 
-    .titleHome{
+    .titleHome {
         cursor: pointer;
-    }
+    };
 
     
-    @media screen and (min-width: 319px) and (max-width: 1041px){
+    @media screen and (min-width: 319px) and (max-width: 1041px) {
 
-    /* flex-direction: column; */
-
-    .titleHome{
+    .titleHome {
         font-size: 18px;
         margin-left: 2.5rem;
-    }
+    };
 
-    .buttons{
+    .buttons {
         display: flex;
-        /* flex-direction: column; */
         margin: 4rem 2rem 4rem 2rem;
         overflow: scroll;
-    }
+    };
 
     div{
-        button{
-        margin: 0 8px 8px 0;
-        }
-    }   
-}
+        button {
+            margin: 0 8px 8px 0;
+        };
+    };   
+};
 
-`
+`;

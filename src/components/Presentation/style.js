@@ -17,7 +17,7 @@ export const Container = styled.div`
     .subtitleName{
         max-width: 16rem;
         margin-left: 7.5rem;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 1.6;
     }
 

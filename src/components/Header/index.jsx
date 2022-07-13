@@ -19,7 +19,8 @@ export const Header = () => {
 
   if (id) {
     dataUser();
-  }
+  };
+  
   const userImg = localStorage.getItem("@Market:img");
 
   return (

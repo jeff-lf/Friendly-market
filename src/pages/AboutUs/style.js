@@ -23,7 +23,7 @@ export const Container = styled.div`
     span {
       color: grey;
       max-width: 16rem;
-      font-size: 11px;
+      font-size: 26px;
       line-height: 1.6;
       margin-bottom: 5px;
     }
@@ -43,7 +43,7 @@ export const Container = styled.div`
 
     p {
       margin-top: 3rem;
-      font-size: 16px;
+      font-size: 18px;
     }
   }
 
@@ -58,7 +58,7 @@ export const Container = styled.div`
     span {
       color: grey;
       max-width: 16rem;
-      font-size: 14px;
+      font-size: 24px;
       line-height: 1.6;
       margin-top: 5rem;
     }
@@ -89,8 +89,12 @@ export const Container = styled.div`
       margin-left: 18px;
       margin-top: 4px;
 
+      h3 {
+        font-size: 20px;
+      }
+
       p{
-        font-size: 13px;
+        font-size: 16px;
         margin-top: 7px;
         line-height: 1.2;
       }
