@@ -25,6 +25,7 @@ export const Container = styled.div`
       line-height: 1.6;
       margin-bottom: 5px;
     }
+  }
 
     h1{
         font-size: 22px;
@@ -82,6 +83,7 @@ export const Container = styled.div`
         margin-left: 15px;
       }
     }
+  }
 
     hr {
       display: none;
@@ -102,6 +104,7 @@ export const Container = styled.div`
         line-height: 1.2;
       }
     }
+  }
 
     @media screen and (min-width: 319px) and (max-width: 1300px){
       .aboutusContainer{
@@ -143,4 +146,4 @@ export const Container = styled.div`
         margin: 1rem 0;
       }
     }
-`
+`;
