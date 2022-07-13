@@ -50,7 +50,6 @@ export const Container = styled.div`
     };
 
     .buttons{
-       width: 65vw;
        min-height: 170px;
        max-height: 170px;
        display: flex;
@@ -66,6 +65,10 @@ export const Container = styled.div`
         width: 100%;
         height: 150px;
 
+       };
+
+       @media (max-width: 859px) {
+            width: 65vw;
        };
     };
    

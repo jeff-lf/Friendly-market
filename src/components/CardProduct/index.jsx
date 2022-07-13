@@ -14,7 +14,7 @@ const Card = ({ index, item }) => {
         <h3>{item.productName}</h3>
         <p>{item.description}</p>
         <h2>
-          R${item.price.toLocaleString("pt-BR", {
+          {item.price.toLocaleString("pt-BR", {
             style: "currency",
             currency: "BRL",
           })}
