@@ -65,7 +65,9 @@ export const AboutUs = () => {
               </p>
             </div>
           </div>
+
           <hr></hr>
+
           <div className="card">
             <picture>
               <img src={Daniely} alt="Foto da Daniely"></img>
@@ -82,6 +84,9 @@ export const AboutUs = () => {
               </p>
             </div>
           </div>
+
+          <hr></hr>
+
           <div className="card">
             <picture>
               <img src={Nathalia} alt="Foto da Nathalia"></img>
@@ -98,6 +103,7 @@ export const AboutUs = () => {
               </p>
             </div>
           </div>
+
           <hr></hr>
 
           <div className="card">
@@ -116,6 +122,9 @@ export const AboutUs = () => {
               </p>
             </div>
           </div>
+
+          <hr></hr>
+
           <div className="card">
             <picture>
               <img src={Luiz} alt="Foto do Luiz"></img>
@@ -132,7 +141,9 @@ export const AboutUs = () => {
               </p>
             </div>
           </div>
+
           <hr></hr>
+          
           <div className="card">
             <picture>
               <img src={Jeffersson} alt="Foto do Jefferson"></img>
