@@ -47,7 +47,7 @@ export const Container = styled.nav`
         overflow: scroll;
     };
 
-    div{
+    div {
         button {
             margin: 0 8px 8px 0;
         };
@@ -55,4 +55,3 @@ export const Container = styled.nav`
 };
 
 `;
-
