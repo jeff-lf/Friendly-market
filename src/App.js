@@ -4,11 +4,11 @@ import Routes from "./routes";
 
 function App() {
   return (
-    <div>
+    <>
       <Routes />
       <GlobalStyle />
       <ToastContainer />
-    </div>
+    </>
   );
 }
 
