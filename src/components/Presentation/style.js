@@ -7,20 +7,45 @@ export const Container = styled.div`
     width: 50vw;
     padding-left: 20px;
 
-    h2{
+    .titleName{
         max-width: 300px;
-        margin-left: 50px;
-        margin-top: 50px;
+        margin: 3rem 0 1rem 7.5rem;
+        line-height: 1.2;
+        font-size: 28px;
     }
 
-    p{
-        max-width: 250px;
-        margin-left: 50px;
+    .subtitleName{
+        max-width: 16rem;
+        margin-left: 7.5rem;
+        font-size: 16px;
+        line-height: 1.6;
     }
 
     img{
         margin-top: 40px;
+        width: 35rem;
+        margin-left: 5rem;
     }
+
+    @media screen and (min-width: 319px) and (max-width: 1041px){
+      .titleName{
+        margin: 2rem 0 2rem 1rem;
+        width: 18rem;
+        font-size: 22px;
+      }
+
+      .subtitleName{
+        margin: 0 0 0 1rem;
+        max-width: 9rem;
+
+      }
+
+      img{
+        margin: -15rem 0 0 10rem;
+        width: 9rem;
+      }
+    }
+
 
 `
 
