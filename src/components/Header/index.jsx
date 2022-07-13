@@ -5,7 +5,6 @@ import { useHistory } from "react-router-dom";
 import Button from '../Button';
 import { api } from "../../services/api";
 
-
 export const Header = () => {
 
     const history = useHistory('');
@@ -48,3 +47,4 @@ export const Header = () => {
         </PageContainer>
     );
 };
+
