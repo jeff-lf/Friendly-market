@@ -30,12 +30,11 @@ export const Header = () => {
         <div className="buttons">
           <Button
             handlerClick={() => history.push("/dashboard")}
-            title="produtos"
+            title="Produtos"
           ></Button>
-          <Button title="anunciar"></Button>
           <Button
             handlerClick={() => history.push("/aboutUs")}
-            title="sobre"
+            title="Sobre"
           ></Button>
         </div>
         <div>
