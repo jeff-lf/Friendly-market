@@ -2,13 +2,13 @@ import styled from "styled-components"
 
 export const Container = styled.div`
     width: 100vw;
-    height: 18vh;
+    height: 25vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 70px;
-    margin-bottom: 40px;
+    margin-top: 40px;
+    margin-bottom: 30px;
 
 
     div{
@@ -44,12 +44,13 @@ export const Container = styled.div`
     }
     .buttons{
        width: 80vw;
-       min-height: 150px;
-       max-height: 150px;
+       min-height: 170px;
+       max-height: 170px;
        display: flex;
        align-items: center;
        justify-content: space-between;
        overflow: auto;
+       overflow-y: hidden;
        margin-top: 20px;
        display: -webkit-box;
 
@@ -64,7 +65,7 @@ export const Container = styled.div`
 
 export const SearchInput = styled.div`
         width: 45vw;
-        height: 5vh;
+        height: 20vh;
         border: 2px solid black;
         border-radius: 5px;
         display: flex;
@@ -74,7 +75,7 @@ export const SearchInput = styled.div`
             border: none;
             width: 90%;
             margin-left: 5px;
-            height: 4vh;
+            height: 6vh;
         }
         textarea:focus, input:focus {
             box-shadow: 0 0 0 0;
@@ -82,7 +83,8 @@ export const SearchInput = styled.div`
         }
 
         button{
-            height: 30px;
+            height: 4vh;
+            width: 40%;
             margin-right: 10px;
         }
 
@@ -105,6 +107,7 @@ export const SearchInput = styled.div`
             width: 80vw;
 
             display:-webkit-box;
+
         }
 
 `

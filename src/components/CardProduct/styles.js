@@ -47,7 +47,7 @@ export const Container = styled.div`
             margin-left: 48%;
             margin-bottom: 8px;
             font-size: 12px;
-            height: 20px;
+            height: 30px;
             width: 50%;
         }
     }

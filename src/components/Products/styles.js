@@ -4,7 +4,6 @@ export const Container = styled.div`
     width: 100vw;
     display: flex;
     justify-content: center;
-    overflow: auto;
 
     .cardContainer{
         width: 80vw;
@@ -21,7 +20,8 @@ export const Container = styled.div`
                 margin-top: 80px;
                 display:-webkit-box;
                 flex-wrap: nowrap;
-                overflow: scroll;
+                overflow: auto;
+                overflow-y: hidden;
                
             }
     }
