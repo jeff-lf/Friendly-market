@@ -47,7 +47,7 @@ export const Header = () => {
               />
             </button>
           ) : (
-            <Button
+            <Button className="btnEntrar"
               handlerClick={() => history.push("/login")}
               title="Entrar"
               blue

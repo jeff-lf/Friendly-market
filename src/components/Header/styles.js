@@ -17,8 +17,8 @@ export const Container = styled.nav`
   div {
     button {
       margin: 20px;
-    }
-  }
+    };
+  };
 
   .avatar {
     background: none;
@@ -26,30 +26,30 @@ export const Container = styled.nav`
 
     :hover {
       transform: scale(1.2);
-    }
-  }
+    };
+  };
 
   .titleHome {
     font-size: 28px;
     cursor: pointer;
-  }
+  };
 
   @media screen and (min-width: 319px) and (max-width: 650px) {
     .titleHome {
       font-size: 18px;
       margin-left: 2.5rem;
-    }
+    };
 
     .buttons {
       display: flex;
       margin: 4rem 2rem 4rem 2rem;
       overflow: scroll;
-    }
+    };
 
     div {
       button {
         margin: 0 8px 8px 0;
-      }
-    }
-  } ;
+      };
+    };
+  };
 `;

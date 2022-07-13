@@ -16,12 +16,12 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-top: 3rem;
+    margin-top: 7rem;
 
     span {
       color: grey;
       max-width: 16rem;
-      font-size: 26px;
+      font-size: 20px;
       line-height: 1.6;
       margin-bottom: 5px;
     }
@@ -38,7 +38,7 @@ export const Container = styled.div`
 
   .right {
     width: 30vw;
-    margin-top: 3rem;
+    margin-top: 7rem;
 
     p {
       margin-top: 3rem;
@@ -57,7 +57,7 @@ export const Container = styled.div`
     span {
       color: grey;
       max-width: 16rem;
-      font-size: 24px;
+      font-size: 20px;
       line-height: 1.6;
       margin-top: 5rem;
     }
@@ -99,7 +99,7 @@ export const Container = styled.div`
       }
 
       p{
-        font-size: 16px;
+        font-size: 15px;
         margin-top: 7px;
         line-height: 1.2;
       }
@@ -116,7 +116,7 @@ export const Container = styled.div`
       .left{
         width: auto;
         text-align: center;
-        margin-top: 2rem;
+        /* margin-top: 2rem; */
       }
 
       .imgAbout{
