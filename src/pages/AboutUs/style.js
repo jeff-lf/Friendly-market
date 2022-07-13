@@ -8,9 +8,7 @@ export const Container = styled.div`
 
   .aboutusContainer {
     display: flex;
-    justify-content: space-between;
-    width: 75vw;
-    height: 75vh;
+    gap: 12rem;
   }
 
   .left {
@@ -69,11 +67,12 @@ export const Container = styled.div`
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 40px;
+    margin-bottom: 40px;
+    gap: 2rem;
   }
 
   .card {
     width: 36vw;
-    height: 200px;
     display: flex;
 
       img {
@@ -82,6 +81,10 @@ export const Container = styled.div`
         border-radius: 100%;
         margin-left: 15px;
       }
+    }
+
+    hr {
+      display: none;
     }
 
     .textContainer {
@@ -100,10 +103,11 @@ export const Container = styled.div`
       }
     }
 
-    @media screen and (min-width: 319px) and (max-width: 1041px){
+    @media screen and (min-width: 319px) and (max-width: 1300px){
       .aboutusContainer{
         flex-direction: column;
         width: 87vw;
+        gap: 1rem;
       }
 
       .left{
@@ -126,10 +130,6 @@ export const Container = styled.div`
         flex-direction: column;
         margin: 0;
         width: auto;
-      }
-      
-      .apresentation span{
-        margin-top: 30rem;
       }
 
       .apresentation{
