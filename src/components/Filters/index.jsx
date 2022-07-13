@@ -14,10 +14,7 @@ import { FiltersContext } from "../../contexts/filters/filters";
 // import { CatalogueContext } from '../../contexts/catalogue/catalogue';
 
 export const Filters = () => {
-  const { filterInputProducts, filterProducts, filtered } =
-    useContext(FiltersContext);
-
-  console.log(filtered);
+  const { filterInputProducts, filterProducts } = useContext(FiltersContext);
 
   const [input, setInput] = useState("");
 
