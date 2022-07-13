@@ -1,17 +1,29 @@
 import styled from "styled-components";
 
+
 export const Container = styled.div`
-  box-sizing: border-box;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 400;
+
+  position: fixed;
+
+  width: 100%;
+  min-height: 100vh;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0,0,0, .5);
 
   .form-container {
     max-width: 300px;
     padding: 10px;
     background-color: white;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .form-container textarea {
