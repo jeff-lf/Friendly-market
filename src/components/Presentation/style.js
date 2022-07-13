@@ -22,9 +22,9 @@ export const Container = styled.div`
     }
 
     img{
-        margin-top: 40px;
-        width: 35rem;
-        margin-left: 5rem;
+        margin-top: 1rem;
+        width: 32.5rem;
+        margin-left: 8rem;
     }
 
     @media screen and (min-width: 319px) and (max-width: 1041px){
