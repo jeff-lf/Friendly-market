@@ -1,6 +1,6 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { ContainerMyProducts, StyledH2 } from "./style";
-import { CatalogueContext } from "../../contexts/catalogue/catalogue";
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { CardMyProduct } from "./cardMyProduct";
 import Button from '../Button/index';
 import { ModalCadastrar } from "./Modals/cadastrarProduto";
@@ -11,9 +11,8 @@ const MyProducts = () => {
 
   const [show, setShow] = useState(false);
   const [userData, setUserData] = useState({});
-  const { catalogue } = useContext(CatalogueContext);
+  const [userProducts, setUserProducts] = useState({});
   const id = JSON.parse(localStorage.getItem("@Market:id"));
-  const filteredList = catalogue.filter(elem => elem.userId === 1);
 
   useEffect(() => {
     api
@@ -22,6 +21,15 @@ const MyProducts = () => {
         setUserData(res.data);
       })
       .catch((err) => console.log(err));
+  }, []);
+
+  useEffect(() => {
+    api
+    .get(`products?userId=${id}`)
+    .then((res) => {
+      setUserProducts(res.data);
+    })
+    .catch((err) => console.log(err))
   }, []);
   
   const CadastrarProduct = () => {
@@ -36,7 +44,7 @@ const MyProducts = () => {
       </div>
       <div className="listContainer">
         <ul>
-          {filteredList?.map((product, index) => (
+          {userProducts?.map((product, index) => (
             <CardMyProduct key={index} product={product}/>
           ))}
         </ul>

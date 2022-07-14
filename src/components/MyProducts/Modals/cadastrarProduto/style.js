@@ -20,14 +20,32 @@ export const Modal = styled.div`
   padding: 10px;
   position: relative;
   width: 315px;
+  height: 35rem;
   left: 0px;
   top: 0px;
   border-radius: 4px;
   background: #fff;
   box-shadow: 0px 4px 40px -10px rgba(0, 0, 0, 0.25);
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  ::-webkit-scrollbar {
+      width: 0.5rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background-color: #8f8f8f;
+      border-radius: 1.25rem;
+  }
+
   .btnContainer {
     display: flex;
     gap: 10px;
+
+    > button {
+      margin-top: 10px;
+      margin-bottom: 50px;
+    }
   }
 `;
 
@@ -49,6 +67,16 @@ export const StyledForm = styled.form`
 
   .error {
     color: crimson;
+  }
+
+  input, select {
+    height: 2rem;
+    padding-left: 20px;
+    border: 2px solid var(--grey-1);
+    border-radius: 7px;
+    :focus {
+      outline: 0;
+    }
   }
 
   input::-webkit-outer-spin-button,

@@ -5,10 +5,13 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { toast } from "react-toastify";
 import { api } from "../../../../services/api";
+
 export const ModalCadastrar = ({ show, setShow }) => {
+
   function handleSair() {
     setShow(false);
-  }
+  };
+  
   const token = localStorage.getItem("@Market:token");
   const userId = JSON.parse(localStorage.getItem("@Market:id"));
 

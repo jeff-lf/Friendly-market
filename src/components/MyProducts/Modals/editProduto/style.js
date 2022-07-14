@@ -28,10 +28,23 @@ export const Modal = styled.div`
   box-shadow: 0px 4px 40px -10px rgba(0, 0, 0, 0.25);
   overflow-y: auto;
 
+  ::-webkit-scrollbar {
+      width: 0.5rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background-color: #8f8f8f;
+      border-radius: 1.25rem;
+  }
+  
   .btnContainer {
     display: flex;
     gap: 10px;
-    margin-top: 20px;
+
+    > button {
+      margin-top: 10px;
+      margin-bottom: 50px;
+    }
   };
 `;
 
@@ -50,28 +63,23 @@ export const StyledForm = styled.form`
     flex-direction: column;
     width: 70%;
   }
-
   .error {
     color: crimson;
   }
-
   input, select {
     height: 2rem;
     padding-left: 20px;
     border: 2px solid var(--grey-1);
     border-radius: 7px;
-
     :focus {
       outline: 0;
     }
   }
-
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
-
   input[type="number"] {
     -moz-appearance: textfield;
   }
