@@ -22,7 +22,7 @@ const Perfil = () => {
   return (
     <>
       <Header />
-      <Tabs value={tabValue} onChange={handleChange} centered>
+      <Tabs value={tabValue} onChange={handleChange} centered sx={{marginTop: 5}}>
         <Tab label="Meus dados" />
         <Tab label="Meus produtos" />
       </Tabs>
