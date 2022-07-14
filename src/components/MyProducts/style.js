@@ -11,10 +11,15 @@ export const ContainerMyProducts = styled.div`
   -webkit-box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.42);
   box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.42);
   padding: 15px;
+  margin-bottom: 50px;
 
-  div {
+  .userProductsHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     > span {
-    color: grey;
+      color: grey;
     };
   };
 
@@ -30,7 +35,18 @@ export const ContainerMyProducts = styled.div`
       list-style: none;
       overflow-x: scroll;
       width: 100%;
+      height: 65vh;
       gap: 10px;
+
+      ::-webkit-scrollbar {
+        width: 0.5rem;
+     };
+
+      ::-webkit-scrollbar-thumb {
+          background-color: #8f8f8f;
+          border-radius: 1.25rem;
+      };
+      
     };
 
     @media (min-width: 760px) {
@@ -46,6 +62,7 @@ export const ContainerMyProducts = styled.div`
         list-style: none;
         overflow-x: hidden;
         gap: 10px;
+        height: 100%;
       };
     };
   };
@@ -56,6 +73,8 @@ export const ContainerMyProducts = styled.div`
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      margin-top: 20px;
     };
 
   @media (min-width: 550px) {

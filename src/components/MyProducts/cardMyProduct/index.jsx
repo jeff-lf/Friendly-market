@@ -32,8 +32,8 @@ export const CardMyProduct = ({ product }) => {
         </span>
       </div>
       <div className='containerBtns'>
-        <EditIcon onClick={() => editProduct()} />
-        <DeleteForeverIcon onClick={() => deleteProduct()} />
+        <EditIcon onClick={() => editProduct()} sx={{cursor: "pointer"}} />
+        <DeleteForeverIcon onClick={() => deleteProduct()} sx={{cursor: "pointer"}}/>
       </div>
       <ModalDelete show={show} setShow={setShow} product={product}/>
       <ModalEdit show={showEdit} setShow={setShowEdit} product={product}/>

@@ -30,7 +30,7 @@ const MyProducts = () => {
 
   return (
     <ContainerMyProducts>
-      <div>
+      <div className="userProductsHeader">
         <StyledH2>Bem vinde, {userData.fullname}!</StyledH2>
         <span>Visualizar seus produtos</span>
       </div>
