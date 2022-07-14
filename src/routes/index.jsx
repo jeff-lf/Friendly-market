@@ -5,8 +5,21 @@ import Home from "../pages/Home";
 import Perfil from "../pages/Perfil";
 import { AboutUs } from "../pages/AboutUs";
 import { LoginOrRegister } from "../pages/Register-Login";
+import { useEffect, useState } from "react";
 
 const Routes = () => {
+
+  const [ authenticated, setAuthenticated ] = useState(false);
+
+  useEffect(() => {
+    const token = JSON.parse(localStorage.getItem("@Market:token"));
+
+    if(token) {
+      return setAuthenticated(true);
+    };
+
+  }, [authenticated]);
+
   return (
     <Switch>
       <Route exact path="/">
@@ -27,7 +40,7 @@ const Routes = () => {
       </Route>
       <Route path="/perfil">
         <Providers>
-          <Perfil />
+          <Perfil authenticated={authenticated} setAuthenticated={setAuthenticated} />
         </Providers>
       </Route>
     </Switch>
