@@ -27,6 +27,10 @@ const GlobalStyle = createGlobalStyle`
 
     };
 
+    body {
+        overflow-x: hidden;
+    }
+
     h1, h2, h3, h4, h5, h6 {
         font-family: "Poppins";
         font-size: 1rem;

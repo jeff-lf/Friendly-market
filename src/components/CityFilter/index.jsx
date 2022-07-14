@@ -5,11 +5,11 @@ import { Container } from "./style";
 import SearchIcon from "@mui/icons-material/Search";
 import Button from "../Button";
 import { useHistory } from "react-router-dom";
-import { CatalogueContext } from "../../contexts/catalogue/catalogue";
+import { FiltersContext } from "../../contexts/filters/filters";
 
 const CityFilter = () => {
   const history = useHistory("");
-  const { request } = useContext(CatalogueContext);
+  const { filterProducts } = useContext(FiltersContext);
 
   const {
     select,
@@ -21,7 +21,7 @@ const CityFilter = () => {
   } = useContext(CityContext);
 
   const handleClick = () => {
-    request();
+    filterProducts("Todos");
     history.push("/dashboard");
   };
 

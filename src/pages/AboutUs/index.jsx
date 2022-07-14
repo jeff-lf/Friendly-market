@@ -19,7 +19,11 @@ export const AboutUs = () => {
             Somos uma empresa de venda e compras de produtos online, garantimos
             o transporte seguro de cada mercadoria.
           </h1>
-          <img src={aboutUs} alt="Imagem para aba Sobre" className="imgAbout"></img>
+          <img
+            src={aboutUs}
+            alt="Imagem para aba Sobre"
+            className="imgAbout"
+          ></img>
         </div>
         <div className="right">
           <p>
@@ -143,7 +147,7 @@ export const AboutUs = () => {
           </div>
 
           <hr></hr>
-          
+
           <div className="card">
             <picture>
               <img src={Jeffersson} alt="Foto do Jefferson"></img>
