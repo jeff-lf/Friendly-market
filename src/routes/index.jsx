@@ -11,14 +11,14 @@ const Routes = () => {
 
   const [ authenticated, setAuthenticated ] = useState(false);
 
-  // useEffect(() => {
-  //   const token = JSON.parse(localStorage.getItem("@Market:token"));
+  useEffect(() => {
+    const token = JSON.parse(localStorage.getItem("@Market:token"));
 
-  //   if(token) {
-  //     return setAuthenticated(true);
-  //   };
+    if(token) {
+      return setAuthenticated(true);
+    };
 
-  // }, [authenticated]);
+  }, [authenticated]);
 
   return (
     <Switch>
